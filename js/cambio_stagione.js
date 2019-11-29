@@ -30,7 +30,7 @@ function getSeason(d) {
     if (day >= 1 && day <= 7) {
       return 'winter';
     }
-    if (day >= 8 && day <= 7) {
+    else if (day >= 8 && day <= 31) {
       return 'christmas';
     }
   }

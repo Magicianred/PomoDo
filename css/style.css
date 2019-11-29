@@ -58,23 +58,30 @@ footer.page-footer {
 
 .spring {
   background-image: url("../images/homepage-months/spring.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .summer {
   background-image: url("../images/homepage-months/summer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .winter {
   background-image: url("../images/homepage-months/winter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .fall {
   background-image: url("../images/homepage-months/fall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .christmas {
   background: url("../images/homepage-months/christmas.jpg");
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
