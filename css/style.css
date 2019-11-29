@@ -55,3 +55,23 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+.spring {
+  background-image: url("../images/homepage-months/spring.jpg");
+}
+
+.summer {
+  background-image: url("../images/homepage-months/summer.jpg");
+}
+
+.winter {
+  background-image: url("../images/homepage-months/winter.jpg");
+}
+
+.fall {
+  background-image: url("../images/homepage-months/fall.jpg");
+}
+
+.christmas {
+  background: url("../images/homepage-months/christmas.jpg");
+}
