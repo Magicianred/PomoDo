@@ -6,14 +6,15 @@ const stopButton = document.querySelector('#pomodo-stop');
 
 const toggleClock = (reset) => {
  if (reset) {
-   // STOP THE TIMER
+   // Stop
+   stopClock();
  } else {
    if (isClockRunning === true) {
-     // PAUSE THE TIMER
+     // Pause
      isClockRunning = false;
      clearInterval(clockTimer);
    } else {
-     // START THE TIMER
+     // Start
      isClockRunning = true;
      clockTimer = setInterval(() => {
   currentTimeLeftInSession--;
@@ -22,6 +23,15 @@ const toggleClock = (reset) => {
    }
  }
 }
+
+
+const stopClock = () => {
+  clearInterval(clockTimer);
+  isClockRunning = false;
+  currentTimeLeftInSession = workSessionDuration;
+  displayCurrentTimeLeftInSession();
+}
+
 
 const displayCurrentTimeLeftInSession = () => {
   const secondsLeft = currentTimeLeftInSession;
