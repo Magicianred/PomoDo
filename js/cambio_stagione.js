@@ -1,28 +1,42 @@
-var currentTime = new Date();
-var month = currentTime.getMonth() + 1;
-var total = month;
+function getSeason(d) {
+  d = d || new Date();
+  var mon = d.getMonth() + 1;
+  var day = d.getDate();
+  var seasons = ['summer','fall','winter','spring', 'christmas'];
 
-// Summer
-if (total >= 6 && total <= 8)
-{
-    document.getElementById("banner-container").style.backgroundImage = "url('images/winter.png')";
+  //Winter
+  if (mon >= 1 && mon <= 2) {
+    return 'winter';
+  }
+
+  //Spring
+  else if (mon >= 2 && mon <= 6) {
+    return 'spring';
+  }
+
+  //Summer
+  else if (mon >= 6 && mon <= 8) {
+    return 'summer';
+  }
+
+
+  //Fall
+  else if (mon >= 9 && mon <= 11) {
+    return 'fall';
+  }
+
+  //Winter+Christmas
+  else if (mon == 12) {
+    if (day >= 1 && day <= 7) {
+      return 'winter';
+    }
+    if (day >= 8 && day <= 7) {
+      return 'christmas';
+    }
+  }
+
+  mon = Math.floor((mon % 12) / 3);
+  return seasons[mon];
 }
-// Autumn
-else if (total >= 9 && total <= 11)
-{
-    document.getElementById("banner-container").style.backgroundImage="url('images/fall.png')";
-}
-// Winter
-else if (total == 12 || total == 1 || total == 2)
-{
-    document.getElementById("banner-container").style.backgroundImage = "url('images/winter.png')";
-}
-// Spring
-else if (total >= 2 && total <= 6)
-{
-    document.getElementById("banner-container").style.backgroundImage = "url('images/spring.png')";
-}
-else
-{
-    document.getElementById("banner-container").style.backgroundImage = "url('images/summer.png')";
-}
+
+document.body.classList.add(getSeason())
