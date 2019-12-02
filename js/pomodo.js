@@ -4,26 +4,51 @@ const startButton = document.querySelector('#pomodo-start');
 const pauseButton = document.querySelector('#pomodo-pause');
 const stopButton = document.querySelector('#pomodo-stop');
 
+// START
+startButton.addEventListener('click', () => {
+  toggleClock();
+})
+
+// PAUSE
+pauseButton.addEventListener('click', () => {
+  toggleClock();
+})
+
+// STOP
+stopButton.addEventListener('click', () => {
+  toggleClock(true);
+})
+
+
+let isClockRunning = false;
+
+
+// 25 mins
+let workSessionDuration = 1500;
+let currentTimeLeftInSession = 1500;
+
+// 5 mins
+let breakSessionDuration = 300;
+
+
 const toggleClock = (reset) => {
- if (reset) {
-   // Stop
-   stopClock();
- } else {
-   if (isClockRunning === true) {
-     // Pause
-     isClockRunning = false;
-     clearInterval(clockTimer);
-   } else {
-     // Start
-     isClockRunning = true;
-     clockTimer = setInterval(() => {
+  if (reset) {
+    stopClock();
+  } else {
+    if (isClockRunning === true) {
+      // PAUSE THE TIMER
+      isClockRunning = false;
+      clearInterval(clockTimer);
+    } else {
+      // START THE TIMER
+      isClockRunning = true;
+      clockTimer = setInterval(() => {
   currentTimeLeftInSession--;
   displayCurrentTimeLeftInSession();
 }, 1000);
-   }
- }
+    }
+  }
 }
-
 
 const stopClock = () => {
   clearInterval(clockTimer);
@@ -32,14 +57,12 @@ const stopClock = () => {
   displayCurrentTimeLeftInSession();
 }
 
-
 const displayCurrentTimeLeftInSession = () => {
   const secondsLeft = currentTimeLeftInSession;
   let result = '';
   const seconds = secondsLeft % 60;
   const minutes = parseInt(secondsLeft / 60) % 60;
   let hours = parseInt(secondsLeft / 3600);
-  // add leading zeroes if it's less than 10
   function addLeadingZeroes(time) {
     return time < 10 ? `0${time}` : time
   }
@@ -47,31 +70,3 @@ const displayCurrentTimeLeftInSession = () => {
   result += `${addLeadingZeroes(minutes)}:${addLeadingZeroes(seconds)}`
   pomodoTimer.innerText = result.toString();
 }
-
-
-
-
-// Start
-startButton.addEventListener('click', () => {
-  toggleClock();
-})
-
-// Pause
-pauseButton.addEventListener('click', () => {
-  toggleClock();
-})
-
-// Stop
-stopButton.addEventListener('click', () => {
-  toggleClock(true);
-})
-
-
-
-
-let isClockRunning = false;
-// 25 mins
-let workSessionDuration = 1500;
-let currentTimeLeftInSession = 1500;
-// 5 mins
-let breakSessionDuration = 300;
