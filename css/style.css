@@ -13,6 +13,8 @@
   }
 
   main {
+    max-width: 500px;
+    margin: auto;
     flex: 1 0 auto;
   }
 
@@ -99,4 +101,8 @@ footer.page-footer {
   background: url("../images/homepage-months/christmas.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hidden {
+  display: none;
 }
