@@ -30,6 +30,13 @@ let currentTimeLeftInSession = 1500;
 // 5 mins
 let breakSessionDuration = 300;
 
+let type = 'Work';
+
+let timeSpentInCurrentSession = 0;
+
+
+
+
 
 const toggleClock = (reset) => {
   if (reset) {
@@ -43,19 +50,24 @@ const toggleClock = (reset) => {
       // START THE TIMER
       isClockRunning = true;
       clockTimer = setInterval(() => {
-  currentTimeLeftInSession--;
+  stepDown();
   displayCurrentTimeLeftInSession();
 }, 1000);
     }
   }
 }
 
+
 const stopClock = () => {
+  displaySessionLog(type);
   clearInterval(clockTimer);
   isClockRunning = false;
   currentTimeLeftInSession = workSessionDuration;
   displayCurrentTimeLeftInSession();
+  timeSpentInCurrentSession = 0;
+  type = 'Work';
 }
+
 
 const displayCurrentTimeLeftInSession = () => {
   const secondsLeft = currentTimeLeftInSession;
@@ -70,3 +82,41 @@ const displayCurrentTimeLeftInSession = () => {
   result += `${addLeadingZeroes(minutes)}:${addLeadingZeroes(seconds)}`
   pomodoTimer.innerText = result.toString();
 }
+
+
+const stepDown = () => {
+  if (currentTimeLeftInSession > 0) {
+    // decrease time left / increase time spent
+    currentTimeLeftInSession--;
+    timeSpentInCurrentSession++;
+    } else if (currentTimeLeftInSession === 0) {
+      timeSpentInCurrentSession = 0;
+      if (type === 'Work') {
+        currentTimeLeftInSession = breakSessionDuration;
+        displaySessionLog('Work');
+        type = 'Break';
+      } else {
+        currentTimeLeftInSession = workSessionDuration;
+        type = 'Work';
+        displaySessionLog('Break');
+      }
+    }
+    displayCurrentTimeLeftInSession();
+  }
+
+
+
+  const displaySessionLog = (type) => {
+    const sessionsList = document.querySelector('#pomodo-sessions');
+    // append li to it
+    const li = document.createElement('li');
+    let sessionLabel = type;
+    let elapsedTime = parseInt(timeSpentInCurrentSession / 60)
+    elapsedTime = elapsedTime > 0 ? elapsedTime : '< 1';
+
+    const text = document.createTextNode(
+      `${sessionLabel} : ${elapsedTime} min`
+    )
+    li.appendChild(text);
+    sessionsList.appendChild(li);
+  }
