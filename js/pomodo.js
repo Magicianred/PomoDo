@@ -1,3 +1,17 @@
+let updatedWorkSessionDuration;
+let updatedBreakSessionDuration;
+
+let workDurationInput = document.querySelector('#input-work-duration');
+let breakDurationInput = document.querySelector('#input-break-duration');
+
+workDurationInput.value = '25';
+breakDurationInput.value = '5';
+
+
+
+
+
+
 const pomodoTimer = document.querySelector('#pomodo-timer');
 
 const startButton = document.querySelector('#pomodo-start');
@@ -20,6 +34,25 @@ stopButton.addEventListener('click', () => {
 })
 
 
+// UPDATE WORK TIME
+workDurationInput.addEventListener('input', () => {
+  updatedWorkSessionDuration = minuteToSeconds(workDurationInput.value)
+})
+
+// UPDATE PAUSE TIME
+breakDurationInput.addEventListener('input', () => {
+  updatedBreakSessionDuration = minuteToSeconds(
+    breakDurationInput.value
+  )
+})
+
+const minuteToSeconds = mins => {
+  return mins * 60
+}
+
+
+
+
 let isClockRunning = false;
 
 
@@ -34,6 +67,12 @@ let type = 'Work';
 
 let timeSpentInCurrentSession = 0;
 
+let currentTaskLabel = document.querySelector('#pomodo-clock-task');
+
+let isClockStopped = true;
+
+
+
 
 
 
@@ -42,30 +81,36 @@ const toggleClock = (reset) => {
   if (reset) {
     stopClock();
   } else {
+    if (isClockStopped) {
+      setUpdatedTimers();
+      isClockStopped = false;
+    }
     if (isClockRunning === true) {
       // PAUSE THE TIMER
       isClockRunning = false;
       clearInterval(clockTimer);
     } else {
       // START THE TIMER
-      isClockRunning = true;
       clockTimer = setInterval(() => {
   stepDown();
   displayCurrentTimeLeftInSession();
-}, 1000);
+}, 1000)
+isClockRunning = true;
     }
   }
 }
 
 
 const stopClock = () => {
+  setUpdatedTimers();
   displaySessionLog(type);
   clearInterval(clockTimer);
+   isClockStopped = true;
   isClockRunning = false;
   currentTimeLeftInSession = workSessionDuration;
   displayCurrentTimeLeftInSession();
-  timeSpentInCurrentSession = 0;
   type = 'Work';
+  timeSpentInCurrentSession = 0;
 }
 
 
@@ -95,12 +140,20 @@ const stepDown = () => {
         currentTimeLeftInSession = breakSessionDuration;
         displaySessionLog('Work');
         type = 'Break';
+        setUpdatedTimers();
+        currentTaskLabel.value = 'Break';
+        currentTaskLabel.disabled = true;
       } else {
         currentTimeLeftInSession = workSessionDuration;
         type = 'Work';
-        displaySessionLog('Break');
-      }
+        setUpdatedTimers();
+        if (currentTaskLabel.value === 'Break') {
+      currentTaskLabel.value = workSessionLabel;
     }
+    currentTaskLabel.disabled = false;
+    displaySessionLog('Break');
+  }
+}
     displayCurrentTimeLeftInSession();
   }
 
@@ -110,7 +163,14 @@ const stepDown = () => {
     const sessionsList = document.querySelector('#pomodo-sessions');
     // append li to it
     const li = document.createElement('li');
-    let sessionLabel = type;
+    if (type === 'Work') {
+  sessionLabel = currentTaskLabel.value
+    ? currentTaskLabel.value
+    : 'Work'
+  workSessionLabel = sessionLabel
+} else {
+  sessionLabel = 'Break'
+}
     let elapsedTime = parseInt(timeSpentInCurrentSession / 60)
     elapsedTime = elapsedTime > 0 ? elapsedTime : '< 1';
 
@@ -119,4 +179,20 @@ const stepDown = () => {
     )
     li.appendChild(text);
     sessionsList.appendChild(li);
+  }
+
+
+
+  const setUpdatedTimers = () => {
+    if (type === 'Work') {
+      currentTimeLeftInSession = updatedWorkSessionDuration
+        ? updatedWorkSessionDuration
+        : workSessionDuration
+      workSessionDuration = currentTimeLeftInSession
+    } else {
+      currentTimeLeftInSession = updatedBreakSessionDuration
+        ? updatedBreakSessionDuration
+        : breakSessionDuration
+      breakSessionDuration = currentTimeLeftInSession
+    }
   }

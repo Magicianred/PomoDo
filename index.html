@@ -33,19 +33,35 @@
     <div id="pomodo-container">
   <div id="pomodo-clock">
     <div id="pomodo-timer"></div>
+    <div><input type="text" id="pomodo-clock-task" placeholder="Scrivi il tuo obiettivo..."/></div>
     <div id="pomodo-clock-actions">
       <button id="pomodo-start">Start</button>
       <button id="pomodo-pause">Pause</button>
       <button id="pomodo-stop">Stop</button>
     </div>
-  </div>
-  <!-- new -->
+  <div id="pomodo-clock-title">
+          <span>
+            I cambiamenti fatti qui si rifletteranno all'inizio della prossima sessione di lavoro /pausa.
+          </span>
+        </div>
+        <div id="pomodo-clock-actions">
+          <div class="pomodo-input">
+            <label>Minuti di lavoro</label>
+            <input name="input-work-duration" id="input-work-duration" type="number" />
+          </div>
+          <div class="pomodo-input">
+            <label>Minuti di pausa</label>
+            <input name="input-break-duration" id="input-break-duration" type="number" />
+          </div>
+        </div>
   <div id="pomodo-info">
     <h3>Your Sessions </h3>
     <ul id="pomodo-sessions">
     </ul>
   </div>
 </div>
+</div>
+    </div>
 </main>
 
 <footer class="footer-copyright trasparente deep-orange darken-4">
