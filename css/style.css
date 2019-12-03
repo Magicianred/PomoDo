@@ -6,6 +6,12 @@
  * Made By MaterializeCSS.com
  */
 
+ @font-face{
+ 	font-family: 'GameCube';
+ 	src: url(../fonts/GameCube.ttf);
+ }
+
+
  body {
     display: flex;
     min-height: 100vh;
@@ -105,4 +111,10 @@ footer.page-footer {
 
 .hidden {
   display: none;
+}
+
+.progressbar-text {
+  font-family: GameCube;
+  color: #000 !important;
+  font-size: 75px;
 }
