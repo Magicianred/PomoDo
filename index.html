@@ -10,7 +10,7 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
-  <script src='progressBar.js'></script>
+  <script src='js/progressBar.js'></script>
 </head>
 <body>
   <header>
@@ -30,14 +30,18 @@
   </header>
 
   <main>
-    <div id="pomodo-container">
+  <div id="pomodo-container">
   <div id="pomodo-clock">
     <div id="pomodo-timer"></div>
     <div><input type="text" id="pomodo-clock-task" placeholder="Scrivi il tuo obiettivo..."/></div>
     <div id="pomodo-clock-actions">
-      <button id="pomodo-start">Start</button>
-      <button id="pomodo-pause">Pause</button>
-      <button id="pomodo-stop">Stop</button>
+      <button id="pomodo-start" class="waves-effect waves-light btn black">
+  <i class="fas fa-play" id="play-icon"></i>
+  <i class="fas fa-pause hidden" id="pause-icon"></i>
+</button>
+<button id="pomodo-stop" class="hidden">
+  <i class="fas fa-stop"></i>
+</button>
     </div>
   <div id="pomodo-clock-title">
           <span>
@@ -67,6 +71,7 @@
 <footer class="footer-copyright trasparente deep-orange darken-4">
   <div class="grey-text text-darken-4">
     Made by <a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
+    Font by <a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
   </div>
 </footer>
 

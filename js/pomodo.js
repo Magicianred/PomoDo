@@ -15,16 +15,10 @@ breakDurationInput.value = '5';
 const pomodoTimer = document.querySelector('#pomodo-timer');
 
 const startButton = document.querySelector('#pomodo-start');
-const pauseButton = document.querySelector('#pomodo-pause');
 const stopButton = document.querySelector('#pomodo-stop');
 
 // START
 startButton.addEventListener('click', () => {
-  toggleClock();
-})
-
-// PAUSE
-pauseButton.addEventListener('click', () => {
   toggleClock();
 })
 
@@ -78,25 +72,29 @@ let isClockStopped = true;
 
 
 const toggleClock = (reset) => {
+  togglePlayPauseIcon(reset);
   if (reset) {
     stopClock();
   } else {
+    console.log(isClockStopped);
     if (isClockStopped) {
       setUpdatedTimers();
       isClockStopped = false;
     }
     if (isClockRunning === true) {
       // PAUSE THE TIMER
-      isClockRunning = false;
       clearInterval(clockTimer);
+      isClockRunning = false;
     } else {
       // START THE TIMER
       clockTimer = setInterval(() => {
   stepDown();
   displayCurrentTimeLeftInSession();
-}, 1000)
+  progressBar.set(calculateSessionProgress());
+}, 1000);
 isClockRunning = true;
     }
+    showStopIcon();
   }
 }
 
@@ -125,13 +123,12 @@ const displayCurrentTimeLeftInSession = () => {
   }
   if (hours > 0) result += `${hours}:`
   result += `${addLeadingZeroes(minutes)}:${addLeadingZeroes(seconds)}`
-  pomodoTimer.innerText = result.toString();
+  progressBar.text.innerText = result.toString();
 }
 
 
 const stepDown = () => {
   if (currentTimeLeftInSession > 0) {
-    // decrease time left / increase time spent
     currentTimeLeftInSession--;
     timeSpentInCurrentSession++;
     } else if (currentTimeLeftInSession === 0) {
@@ -161,7 +158,6 @@ const stepDown = () => {
 
   const displaySessionLog = (type) => {
     const sessionsList = document.querySelector('#pomodo-sessions');
-    // append li to it
     const li = document.createElement('li');
     if (type === 'Work') {
   sessionLabel = currentTaskLabel.value
@@ -196,3 +192,51 @@ const stepDown = () => {
       breakSessionDuration = currentTimeLeftInSession
     }
   }
+
+
+
+
+
+  const togglePlayPauseIcon = (reset) => {
+    const playIcon = document.querySelector('#play-icon');
+    const pauseIcon = document.querySelector('#pause-icon');
+    if (reset) {
+      if (playIcon.classList.contains('hidden')) {
+        playIcon.classList.remove('hidden')
+      }
+      if (!pauseIcon.classList.contains('hidden')) {
+        pauseIcon.classList.add('hidden')
+      }
+    } else {
+      playIcon.classList.toggle('hidden')
+      pauseIcon.classList.toggle('hidden')
+    }
+  }
+
+
+
+
+  const showStopIcon = () => {
+    const stopButton = document.querySelector('#pomodo-stop')
+    stopButton.classList.remove('hidden');
+  }
+
+
+
+
+
+  const progressBar = new ProgressBar.Circle("#pomodo-timer", {
+     strokeWidth: 2,
+     text: {
+       value: "25:00"
+     },
+     trailColor: "#f4f4f4",
+   });
+
+
+
+   const calculateSessionProgress = () => {
+     const sessionDuration =
+       type === 'Work' ? workSessionDuration : breakSessionDuration
+     return (timeSpentInCurrentSession / sessionDuration) * 10
+   }
