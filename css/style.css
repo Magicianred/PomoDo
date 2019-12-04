@@ -19,8 +19,6 @@
   }
 
   main {
-    max-width: 500px;
-    margin: auto;
     flex: 1 0 auto;
   }
 
@@ -117,4 +115,16 @@ footer.page-footer {
   font-family: GameCube;
   color: #000 !important;
   font-size: 75px;
+}
+
+#pomodo-clock {
+  position: relative;
+  -webkit-transform: translateY(25%);
+    background:rgba(255,255,255,0.5);
+    margin-left: 30px;
+}
+
+#pomodo-timer {
+  max-width: 500px;
+  margin: auto;
 }
