@@ -108,7 +108,7 @@ footer.page-footer {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .progressbar-text {
@@ -127,4 +127,18 @@ footer.page-footer {
 #pomodo-timer {
   max-width: 500px;
   margin: auto;
+}
+
+#pomodoro-clock-actions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100px;
+}
+
+#pomodoro-clock-actions button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
