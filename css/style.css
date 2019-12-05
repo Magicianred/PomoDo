@@ -1,26 +1,26 @@
 /* Custom Stylesheet */
 /**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
+* Use this file to override Materialize files so you can update
+* the core Materialize files in the future
+*
+* Made By MaterializeCSS.com
+*/
 
- @font-face{
- 	font-family: 'GameCube';
- 	src: url(../fonts/GameCube.ttf);
- }
+@font-face{
+  font-family: 'GameCube';
+  src: url(../fonts/GameCube.ttf);
+}
 
 
- body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+main {
+  flex: 1 0 auto;
+}
 
 nav ul a,
 nav .brand-logo {
@@ -41,9 +41,9 @@ p {
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+.parallax-container .section {
+  width: 100%;
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -66,11 +66,6 @@ p {
 }
 .icon-block .material-icons {
   font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
-  position: relative;
 }
 
 .trasparente {
@@ -115,30 +110,39 @@ footer.page-footer {
   font-family: GameCube;
   color: #000 !important;
   font-size: 75px;
+  padding-top: 20px;
 }
 
 #pomodo-clock {
   position: relative;
-  -webkit-transform: translateY(25%);
-    background:rgba(255,255,255,0.5);
-    margin-left: 30px;
+  margin-top: 80px;
+  background:rgba(255,255,255,0.5);
+  margin-left: 30px;
+  margin-bottom: 60px;
+  min-width: 425px;
 }
 
 #pomodo-timer {
+  padding-top: 20px;
   max-width: 500px;
+  min-width: 480px;
   margin: auto;
 }
 
-#pomodoro-clock-actions {
-  margin-top: 20px;
+footer{
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  bottom: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100px;
 }
 
-#pomodoro-clock-actions button {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  bottom: 0;
+  padding-top: unset;
 }
