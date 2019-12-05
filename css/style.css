@@ -35,16 +35,6 @@ p {
   color: #26a69a;
 }
 
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-.parallax-container .section {
-  width: 100%;
-}
-
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
@@ -131,18 +121,14 @@ p {
 
 footer{
   position: relative;
-  z-index: 10;
-  width: 100vw;
-  bottom: 0;
   display: flex;
 }
 
 .page-footer {
   display: flex;
-  flex-direction: column;
   position: fixed;
-  z-index: 10;
-  width: 100vw;
+  width: 100%;
   bottom: 0;
   padding-top: unset;
+  background:rgba(255,255,255,0.5);
 }
