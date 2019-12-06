@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
+  <title>PomoDo</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+  <!-- Calendar-->
+  <link href='fullcalendar/core/main.css' rel='stylesheet' />
+  <script src='fullcalendar/core/main.js'></script>
+  <script src="js/calendar.js"></script>
+
+<!--DayGrid-->
+<link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
+<script src='fullcalendar/daygrid/main.js'></script>
+
+<!--Rrule-->
+<script src="fullcalendar/rrule/rrule.js"></script>
+
+<!--TimeGrid-->
+<link rel="stylesheet" href="fullcalendar/timegrid/main.css">
+<script src="fullcalendar/timegrid/main.js"></script>
+
+<!--List-->
+<link rel="stylesheet" href="fullcalendar/list/main.css">
+<script src="fullcalendar/list/main.js"></script>
+
+<!--Interaction-->
+<script src="fullcalendar/interaction/main.js"></script>
 
 </head>
 <body>
@@ -32,7 +55,7 @@
   </header>
 
   <main>
-
+<div id='calendar' class="trasparente"></div>
 </main>
 
 <footer class="page-footer">
@@ -44,13 +67,11 @@
 </footer>
 
 
-<!--  Scripts-->
+<!-- Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/cambio_stagione.js"></script>
-<script src='js/progressBar.js'></script>
-<script src="js/pomodo.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
-
 
 </body>
 </html>
