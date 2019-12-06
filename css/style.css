@@ -59,7 +59,7 @@ p {
 }
 
 .trasparente {
-  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .spring {
@@ -131,4 +131,9 @@ footer{
   bottom: 0;
   padding-top: unset;
   background:rgba(255,255,255,0.5);
+}
+
+#calendar {
+  max-width: 900px;
+  margin: 0 auto;
 }
