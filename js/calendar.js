@@ -1,30 +1,43 @@
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
+  var Draggable = FullCalendarInteraction.Draggable;
+
+  var containerEl = document.getElementById('external-events');
+  var calendarEl = document.getElementById('calendar');
+  var checkbox = document.getElementById('drop-remove');
+
+
+          new Draggable(containerEl, {
+     itemSelector: '.fc-event',
+     eventData: function(eventEl) {
+       return {
+         title: eventEl.innerText
+       };
+     }
+   });
+
+
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list', 'rrule' ],
+    plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+    selectable: true,
     header: {
       left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+      right: 'dayGridMonth,timeGridWeek,timeGridDay'
     },
-    defaultDate: '2019-08-12',
     editable: true,
-    events: [
-      {
-        title: 'rrule event',
-        rrule: {
-          dtstart: '2019-08-09T13:00:00',
-          // until: '2019-08-01',
-          freq: 'weekly'
-        },
-        duration: '02:00'
+    droppable: true,
+    drop: function(info) {
+      if (checkbox.checked) {
+        info.draggedEl.parentNode.removeChild(info.draggedEl);
       }
-    ],
-    eventClick: function(arg) {
-      if (confirm('delete event?')) {
-        arg.event.remove()
-      }
+    },
+    dateClick: function(info) {
+      alert('clicked ' + info.dateStr);
+    },
+    select: function(info) {
+      alert('selected ' + info.startStr + ' to ' + info.endStr);
     }
   });
 

@@ -11,6 +11,10 @@
   src: url(../fonts/GameCube.ttf);
 }
 
+@font-face{
+  font-family: 'Tomatoes';
+  src: url(../fonts/Tomatoes/Tomatoes.ttf);
+}
 
 body {
   display: flex;
@@ -96,6 +100,11 @@ p {
   display: none !important;
 }
 
+.brand-logo {
+font-family: Tomatoes;
+font-weight: bold;
+}
+
 .progressbar-text {
   font-family: GameCube;
   color: #000 !important;
@@ -133,7 +142,29 @@ footer{
   background:rgba(255,255,255,0.5);
 }
 
+#external-events {
+  position: fixed;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+  width: 150px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  background: #eee;
+}
+
+#external-events .fc-event {
+  margin: 1em 0;
+  cursor: move;
+}
+
+#calendar-container {
+  position: relative;
+  z-index: 1;
+  margin-left: 200px;
+}
+
 #calendar {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 20px auto;
 }

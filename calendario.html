@@ -10,68 +10,84 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
-
-  <!-- Calendar-->
   <link href='fullcalendar/core/main.css' rel='stylesheet' />
+  <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
+  <link href='fullcalendar/timegrid/main.css' rel='stylesheet' />
+
+  <!--Script-->
   <script src='fullcalendar/core/main.js'></script>
+  <script src='fullcalendar/daygrid/main.js'></script>
+  <script src='fullcalendar/interaction/main.js'></script>
+  <script src='fullcalendar/timegrid/main.js'></script>
   <script src="js/calendar.js"></script>
 
-<!--DayGrid-->
-<link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
-<script src='fullcalendar/daygrid/main.js'></script>
-
-<!--Rrule-->
-<script src="fullcalendar/rrule/rrule.js"></script>
-
-<!--TimeGrid-->
-<link rel="stylesheet" href="fullcalendar/timegrid/main.css">
-<script src="fullcalendar/timegrid/main.js"></script>
-
-<!--List-->
-<link rel="stylesheet" href="fullcalendar/list/main.css">
-<script src="fullcalendar/list/main.js"></script>
-
-<!--Interaction-->
-<script src="fullcalendar/interaction/main.js"></script>
+  <!--Icon-->
+  <link rel="shortcut icon" type="image/x-icon" href="../images/tomato.png" />
 
 </head>
 <body>
   <header>
-    <nav class="white" role="navigation">
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">PomoDo</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="index.html">PomoDo</a></li>
-          <li><a href="abitudini.html">Abitudini</li>
-          <li><a href="calendario.html">Calendario</a></li>
-        </ul>
 
-        <ul id="nav-mobile" class="sidenav">
-          <li><a href="#">Navbar Link</a></li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
+    <div class="navbar-fixed">
+      <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="index.html" class="brand-logo">PomoDo</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">PomoDo</a></li>
+            <li><a href="abitudini.html">Abitudini</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+          </ul>
+
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
-<div id='calendar' class="trasparente"></div>
-</main>
 
-<footer class="page-footer">
-  <div class="grey-text text-darken-4">
-    Creato da <a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
-    Design di <a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
-    Font di <a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
-  </div>
-</footer>
+    <!--Calendario-->
+
+    <div id='external-events'>
+  <p>
+    <strong>Draggable Events</strong>
+  </p>
+  <div class='fc-event'>My Event 1</div>
+  <div class='fc-event'>My Event 2</div>
+  <div class='fc-event'>My Event 3</div>
+  <div class='fc-event'>My Event 4</div>
+  <div class='fc-event'>My Event 5</div>
+  <p>
+    <input type='checkbox' id='drop-remove' />
+    <label for='drop-remove'>remove after drop</label>
+  </p>
+</div>
+
+<div id='calendar-container'>
+  <div id='calendar'></div>
+</div>
 
 
-<!-- Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/cambio_stagione.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
+    <!--Fine Calendario-->
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="grey-text text-darken-4">
+      Creato da <a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
+      Design di <a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
+      Font di <a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
+    </div>
+  </footer>
+
+
+  <!-- Scripts-->
+  <script src="js/cambio_stagione.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/sidenav.js"></script>
 
 </body>
 </html>
