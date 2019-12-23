@@ -10,11 +10,13 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+  <!--CSS Calendar-->
   <link href='fullcalendar/core/main.css' rel='stylesheet' />
   <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
   <link href='fullcalendar/timegrid/main.css' rel='stylesheet' />
 
-  <!--Script-->
+  <!--JS Calendario-->
   <script src='fullcalendar/core/main.js'></script>
   <script src='fullcalendar/daygrid/main.js'></script>
   <script src='fullcalendar/interaction/main.js'></script>
@@ -22,7 +24,7 @@
   <script src="js/calendar.js"></script>
 
   <!--Icon-->
-  <link rel="shortcut icon" type="image/x-icon" href="../images/tomato.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/tomato.png" />
 
 </head>
 <body>
@@ -52,23 +54,23 @@
     <!--Calendario-->
 
     <div id='external-events'>
-  <p>
-    <strong>Draggable Events</strong>
-  </p>
-  <div class='fc-event'>My Event 1</div>
-  <div class='fc-event'>My Event 2</div>
-  <div class='fc-event'>My Event 3</div>
-  <div class='fc-event'>My Event 4</div>
-  <div class='fc-event'>My Event 5</div>
-  <p>
-    <input type='checkbox' id='drop-remove' />
-    <label for='drop-remove'>remove after drop</label>
-  </p>
-</div>
+      <p class="grey-text text-darken-3">
+        <br><br>
+        <strong>Crea Eventi</strong><br>
+        <h7 class="grey-text text-darken-3">
+          Scrivi l'evento che vuoi ricordare e trascinalo nel calendario. <br>
+          Puoi crearne molteplici e trascinale lo stesso più volte.
+        </h7>
+      </p>
+      <div class="input-field col s12">
+        <textarea id="textarea1" class="materialize-textarea fc-event"></textarea>
+        <label for="textarea1">Scrivi qui...</label>
+      </div>
+    </div>
 
-<div id='calendar-container'>
-  <div id='calendar'></div>
-</div>
+    <div id='calendar-container'>
+      <div id='calendar'></div>
+    </div>
 
 
     <!--Fine Calendario-->
@@ -88,6 +90,6 @@
   <script src="js/cambio_stagione.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/sidenav.js"></script>
-
+  <script src="js/textarea1.js"></script>
 </body>
 </html>

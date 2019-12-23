@@ -4,14 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var containerEl = document.getElementById('external-events');
   var calendarEl = document.getElementById('calendar');
-  var checkbox = document.getElementById('drop-remove');
 
 
           new Draggable(containerEl, {
      itemSelector: '.fc-event',
      eventData: function(eventEl) {
        return {
-         title: eventEl.innerText
+         title: eventEl.innerText,
        };
      }
    });
@@ -28,11 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     editable: true,
     droppable: true,
-    drop: function(info) {
-      if (checkbox.checked) {
-        info.draggedEl.parentNode.removeChild(info.draggedEl);
-      }
-    },
     dateClick: function(info) {
       alert('clicked ' + info.dateStr);
     },
