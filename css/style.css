@@ -1,11 +1,3 @@
-/* Custom Stylesheet */
-/**
-* Use this file to override Materialize files so you can update
-* the core Materialize files in the future
-*
-* Made By MaterializeCSS.com
-*/
-
 @font-face{
   font-family: 'GameCube';
   src: url(../fonts/GameCube.ttf);
@@ -136,46 +128,4 @@ footer{
   bottom: 0;
   padding-top: unset;
   background:rgba(255,255,255,0.5);
-}
-
-#external-events {
-  position: fixed;
-  z-index: 2;
-  top: 20px;
-  left: 20px;
-  width: 150px;
-  padding: 0 10px;
-  border: 1px solid #ccc;
-  background: #eee;
-}
-
-#external-events .fc-event {
-  margin: 1em 0;
-  cursor: move;
-}
-
-#calendar-container {
-  position: relative;
-  z-index: 1;
-  margin-left: 200px;
-}
-
-#calendar {
-  max-width: 900px;
-  margin: 20px auto;
-}
-
-h7 {
-  font-weight: 400;
-  line-height: 1.3;
-  font-size: 0.8rem;
-  line-height: 110%;
-  margin: 0.7666666667rem 0 0.46rem 0;
-
-}
-
-.fc-event {
-  background-color: transparent !important;
-  border: 1px solid #424242 !important;
-  color: #fff;
 }
