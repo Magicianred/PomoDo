@@ -1,9 +1,9 @@
-@font-face{
+@font-face {
   font-family: 'GameCube';
   src: url(../fonts/GameCube.ttf);
 }
 
-@font-face{
+@font-face {
   font-family: 'Tomatoes';
   src: url(../fonts/Tomatoes/Tomatoes.ttf);
 }
@@ -48,6 +48,7 @@ nav .brand-logo {
 .icon-block {
   padding: 0 15px;
 }
+
 .icon-block .material-icons {
   font-size: inherit;
 }
@@ -91,8 +92,8 @@ nav .brand-logo {
 }
 
 .brand-logo {
-font-family: Tomatoes;
-font-weight: bold;
+  font-family: Tomatoes;
+  font-weight: bold;
 }
 
 .progressbar-text {
@@ -118,7 +119,7 @@ font-weight: bold;
   margin: auto;
 }
 
-footer{
+footer {
   position: relative;
   display: flex;
 }
