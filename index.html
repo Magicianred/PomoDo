@@ -12,42 +12,39 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
 
   <!--Icon-->
-  <link rel="shortcut icon" type="image/x-icon" href="../images/tomato.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/tomato.png" />
 </head>
 <body>
   <header>
+      <div class="navbar-fixed">
+<nav>
+        <div class="nav-wrapper white">
+          <a href="index.html" class="brand-logo">PomoDo</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html">PomoDo</a></li>
+            <li><a href="abitudini.html">Abitudini</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+          </ul>
+          </div>
+          </nav>
+    </div>
 
-    <div class="navbar-fixed">
-      <nav>
-    <div class="nav-wrapper white">
-      <a href="index.html" class="brand-logo">PomoDo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <!--Side Navbar-->
+<ul class="sidenav" id="mobile-demo">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="images/homepage-months/christmas.jpg">
+          </div>
+          <a href="#user"><img class="circle materialboxed" src="images/tomato_color.png">
+          <a href="#name"><span class="white-text name">PomoDo</span></a>
+        </div></li>
         <li><a href="index.html">PomoDo</a></li>
         <li><a href="abitudini.html">Abitudini</a></li>
         <li><a href="calendario.html">Calendario</a></li>
       </ul>
-    </div>
-  </nav>
-
-
-    <ul id="slide-out" class="sidenav">
-    <li><div class="user-view">
-      <div class="background">
-        <img src="images/office.jpg">
-      </div>
-      <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-      <a href="#name"><span class="white-text name">John Doe</span></a>
-      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-  </ul>
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-</div>
-  </header>
+      <!--End Side Navbar-->
+</header>
 
   <main>
     <div id="pomodo-container" class="row">
