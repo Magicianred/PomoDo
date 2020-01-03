@@ -137,6 +137,15 @@ nav .brand-logo {
 }
 }
 
+.italy {
+  background: url("../images/italy.png") !important;
+}
+
+.england {
+background: url("../images/england.png") !important;
+background-repeat: no-repeat;
+}
+
 footer {
   position: relative;
   display: flex;

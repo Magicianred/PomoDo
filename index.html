@@ -16,8 +16,8 @@
 </head>
 <body>
   <header>
-      <div class="navbar-fixed">
-<nav>
+    <div class="navbar-fixed">
+      <nav>
         <div class="nav-wrapper white">
           <a href="index.html" class="brand-logo">PomoDo</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -26,17 +26,17 @@
             <li><a href="abitudini.html">Abitudini</a></li>
             <li><a href="calendario.html">Calendario</a></li>
           </ul>
-          </div>
-          </nav>
+        </div>
+      </nav>
     </div>
 
-      <!--Side Navbar-->
-<ul class="sidenav" id="mobile-demo">
-        <li><div class="user-view">
-          <div class="background">
-            <img src="images/homepage-months/christmas.jpg">
-          </div>
-          <a href="#user"><img class="circle materialboxed" src="images/tomato_color.png">
+    <!--Side Navbar-->
+    <ul class="sidenav" id="mobile-demo">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="images/homepage-months/christmas.jpg">
+        </div>
+        <a href="#user"><img class="circle materialboxed" src="images/tomato_color.png">
           <a href="#name"><span class="white-text name">PomoDo</span></a>
         </div></li>
         <li><a href="index.html">PomoDo</a></li>
@@ -44,10 +44,10 @@
         <li><a href="calendario.html">Calendario</a></li>
       </ul>
       <!--End Side Navbar-->
-</header>
+    </header>
 
-  <main>
-    <div id="pomodo-container" class="row">
+    <main>
+      <div id="pomodo-container" class="row">
         <div id="pomodo-timer"class="col s6"></div>
 
         <div id="pomodo-clock" class="col s7">
@@ -92,24 +92,37 @@
           </div>
         </div>
       </div>
-</main>
-
-<footer class="page-footer">
-  <div class="grey-text text-darken-4">
-    Creato da <a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
-    Design di <a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
-    Font di <a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
-  </div>
-</footer>
 
 
-<!--  Scripts-->
-<script src="js/cambio_stagione.js"></script>
-<script src='js/progressBar.js'></script>
-<script src="js/pomodo.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/sidenav.js"></script>
+      <!--Floating Action Button-->
+      <div class="fixed-action-btn">
+        <a class="btn-floating btn-large grey darken-4">
+          <i class="large fas fa-language"></i>
+        </a>
+        <ul>
+          <li><a class="btn-floating btn-small italy"></a></li>
+          <li><a class="btn-floating btn-small england"></a></li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="grey-text text-darken-4">
+        Creato da <a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
+        Design di <a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
+        Font di <a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
+      </div>
+    </footer>
 
 
-</body>
-</html>
+    <!--  Scripts-->
+    <script src="js/cambio_stagione.js"></script>
+    <script src='js/progressBar.js'></script>
+    <script src="js/pomodo.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/sidenav.js"></script>
+    <script src="js/FloatingActionButton.js"></script>
+
+
+  </body>
+  </html>
