@@ -44,7 +44,8 @@ nav .brand-logo {
 }
 
 label {
-color: #424242;
+color: #fafafa;
+text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 }
 
 .hidden {
@@ -54,6 +55,16 @@ color: #424242;
 .brand-logo {
   font-family: Tomatoes;
   font-weight: bold;
+}
+
+.btn {
+  color: black;
+  box-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
+}
+
+h3 {
+color: #fafafa;
+text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 }
 
 /* Background */
@@ -131,16 +142,20 @@ color: #424242;
 
 /* Style Placeholders */
 ::-webkit-input-placeholder {
-  color: #d1d1d1;
+  color: #fafafa;
+  text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 }
 ::-moz-placeholder {
-  color: #d1d1d1;
+  color: #fafafa;
+  text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 }
 :-ms-input-placeholder {
-  color: #d1d1d1;
+  color: #fafafa;
+  text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 }
 ::placeholder {
-  color: #d1d1d1;
+  color: #fafafa;
+  text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 }
 
 /* Text inputs */
@@ -149,6 +164,8 @@ input[type=text]:not(.browser-default),
 input[type=number]:not(.browser-default),
 textarea.materialize-textarea {
 border-bottom: 1px solid #424242;
+color: #fafafa;
+text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 }
 
 @media only screen and (max-width : 600px) {
@@ -164,9 +181,9 @@ input:not([type]):focus:not([readonly]),
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #b71c1c;
-  -webkit-box-shadow: 0 1px 0 0 #b71c1c;
-          box-shadow: 0 1px 0 0 #b71c1c;
+  border-bottom: 1px solid #fafafa;
+  -webkit-box-shadow: 0 1px 0 0 #fafafa;
+          box-shadow: 0 1px 0 0 #fafafa;
 }
 
 /* Floating Action Buttons */
