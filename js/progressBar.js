@@ -367,7 +367,7 @@ var Shape = function Shape(container, opts) {
 
     // Default parameters for progress bar creation
     this._opts = utils.extend({
-        color: '#555',
+        color: '#212121',
         strokeWidth: 1.0,
         trailColor: null,
         trailWidth: null,
