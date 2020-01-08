@@ -29,16 +29,6 @@ nav .brand-logo {
   color: #444;
 }
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
@@ -53,38 +43,8 @@ nav .brand-logo {
   font-size: inherit;
 }
 
-.trasparente {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.spring {
-  background-image: url("../images/homepage-months/spring.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.summer {
-  background-image: url("../images/homepage-months/summer.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.winter {
-  background-image: url("../images/homepage-months/winter.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.fall {
-  background-image: url("../images/homepage-months/fall.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.christmas {
-  background: url("../images/homepage-months/christmas.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+label {
+color: #424242;
 }
 
 .hidden {
@@ -96,6 +56,38 @@ nav .brand-logo {
   font-weight: bold;
 }
 
+/* Background */
+.spring {
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/spring.jpg");
+  background-size: cover;
+}
+
+.summer {
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/summer.jpg");
+  background-size: cover;
+}
+
+.winter {
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/winter.jpg");
+  background-size: cover;
+}
+
+.fall {
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/fall.jpg");
+  background-size: cover;
+}
+
+.christmas {
+  background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/christmas.jpg");
+  background-size: cover;
+}
+
+.halloween {
+  background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/halloween.jpg");
+  background-size: cover;
+}
+
+/* Pomodo */
 .progressbar-text {
   font-family: GameCube;
   color: #000 !important;
@@ -137,8 +129,50 @@ nav .brand-logo {
 }
 }
 
+/* Style Placeholders */
+::-webkit-input-placeholder {
+  color: #d1d1d1;
+}
+::-moz-placeholder {
+  color: #d1d1d1;
+}
+:-ms-input-placeholder {
+  color: #d1d1d1;
+}
+::placeholder {
+  color: #d1d1d1;
+}
+
+/* Text inputs */
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=number]:not(.browser-default),
+textarea.materialize-textarea {
+border-bottom: 1px solid #424242;
+}
+
+@media only screen and (max-width : 600px) {
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=number]:not(.browser-default),
+textarea.materialize-textarea {
+width: 94%;
+}
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #b71c1c;
+  -webkit-box-shadow: 0 1px 0 0 #b71c1c;
+          box-shadow: 0 1px 0 0 #b71c1c;
+}
+
+/* Floating Action Buttons */
 .italy {
   background: url("../images/italy.png") !important;
+  background-repeat: no-repeat;
 }
 
 .england {
@@ -146,6 +180,7 @@ background: url("../images/england.png") !important;
 background-repeat: no-repeat;
 }
 
+/* Footer */
 footer {
   position: relative;
   display: flex;
