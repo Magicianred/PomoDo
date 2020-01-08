@@ -5,7 +5,7 @@ function getSeason(d) {
 
   //Winter
   if (mon >= 1 && mon <= 2) {
-    return ['winter', 'red-text'];
+    return ['winter'];
   }
 
   //Spring
@@ -18,19 +18,33 @@ function getSeason(d) {
     return ['summer'];
   }
 
+  //Fall
+  else if (mon == 9) {
+    return ['fall'];
+  }
+
+  //Fall+Halloween
+  else if (mon == 10) {
+    if (day >=1 && day <=30) {
+      return ['fall'];
+    }
+    else if (day == 31) {
+      return ['halloween'];
+    }
+  }
 
   //Fall
-  else if (mon >= 9 && mon <= 11) {
+  else if (mon==11) {
     return ['fall'];
   }
 
   //Winter+Christmas
   else if (mon == 12) {
     if (day >= 1 && day <= 7) {
-      return ['winter', 'red-text'];
+      return ['winter'];
     }
     else if (day >= 8 && day <= 31) {
-      return ['christmas', 'yellow-text'];
+      return ['christmas'];
     }
   }
 
