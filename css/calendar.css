@@ -111,7 +111,7 @@
 }
 
 .calendar .add-event-day .add-event-day-field:focus {
-  outline: none;
+  outline: none ;
 }
 
 .calendar .add-event-day .add-event-day-field::placeholder {

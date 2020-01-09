@@ -28,11 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let isClockStopped = true;
 
  const progressBar = new ProgressBar.Circle("#pomodo-timer", {
-   strokeWidth: 2,
+   color: '#212121',
+   strokeWidth: 6,
    text: {
      value: "25:00"
    },
    trailColor: "#f4f4f4",
+   trailWidth: 1,
+   easing: 'easeInOut',
+   svgStyle: null
  });
 
   // Start

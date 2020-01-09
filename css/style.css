@@ -10,9 +10,7 @@
 
 body {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
-  background: #dcdcdc;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -101,7 +99,7 @@ text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 /* Pomodo */
 .progressbar-text {
   font-family: GameCube;
-  color: #000 !important;
+  color: #212121 !important;
   font-size: 75px;
   padding-top: 40px !important;
 }
@@ -184,6 +182,32 @@ textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #fafafa;
   -webkit-box-shadow: 0 1px 0 0 #fafafa;
           box-shadow: 0 1px 0 0 #fafafa;
+}
+
+/*Calendar on Mobile*/
+@media only screen and (max-width : 600px) {
+  .left-side {
+    width: 350px;
+
+  }
+}
+
+/*Calendar Input*/
+input.add-event-day-field,
+input.add-event-day-field:focus
+{
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.add-event-day-field::placeholder {
+text-shadow: none;
+color: #fff !important;
+}
+
+.calendar .add-event-day .add-event-day-field {
+  margin: 0;
 }
 
 /* Floating Action Buttons */
