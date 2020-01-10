@@ -8,10 +8,15 @@
   src: url(../fonts/Tomatoes/Tomatoes.ttf);
 }
 
+@media only screen and (max-width : 600px) {
+  body {
+    min-height: 160vh;
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -42,8 +47,8 @@ nav .brand-logo {
 }
 
 label {
-color: #fafafa;
-text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
+  color: #fafafa;
+  text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 }
 
 .hidden {
@@ -61,8 +66,8 @@ text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 }
 
 h3 {
-color: #fafafa;
-text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
+  color: #fafafa;
+  text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 }
 
 /* Background */
@@ -104,23 +109,28 @@ text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
   padding-top: 40px !important;
 }
 
+@media only screen and (max-width : 600px) {
+  #pomodo-container {
+    margin: 25px !important;
+  }
+  #pomodo-timer {
+    margin: 0;
+  }
+  #pomodo-clock {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
 #pomodo-container {
   margin: 60px;
   margin-top: 1px;
 }
 
-@media only screen and (max-width : 600px) {
-#pomodo-container {
-  margin: 10px;
-  margin-top: 1px;
-}
-}
-
 #pomodo-clock {
   position: relative;
   margin-top: 80px;
-  margin-left: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   min-width: 425px;
 }
 
@@ -128,14 +138,6 @@ text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
   padding-top: 60px;
   max-width: 400px;
   min-width: 380px;
-  margin: auto;
-}
-
-@media only screen and (max-width : 600px) {
-#pomodo-timer {
-  margin: 40px;
-  margin-top: 1px;
-}
 }
 
 /* Style Placeholders */
@@ -161,18 +163,18 @@ input:not([type]),
 input[type=text]:not(.browser-default),
 input[type=number]:not(.browser-default),
 textarea.materialize-textarea {
-border-bottom: 1px solid #424242;
-color: #fafafa;
-text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
+  border-bottom: 1px solid #424242;
+  color: #fafafa;
+  text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;
 }
 
 @media only screen and (max-width : 600px) {
-input:not([type]),
-input[type=text]:not(.browser-default),
-input[type=number]:not(.browser-default),
-textarea.materialize-textarea {
-width: 94%;
-}
+  input:not([type]),
+  input[type=text]:not(.browser-default),
+  input[type=number]:not(.browser-default),
+  textarea.materialize-textarea {
+    width: 94%;
+  }
 }
 
 input:not([type]):focus:not([readonly]),
@@ -181,7 +183,7 @@ input[type=number]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #fafafa;
   -webkit-box-shadow: 0 1px 0 0 #fafafa;
-          box-shadow: 0 1px 0 0 #fafafa;
+  box-shadow: 0 1px 0 0 #fafafa;
 }
 
 /*Calendar on Mobile*/
@@ -198,12 +200,12 @@ input.add-event-day-field:focus
 {
   border-bottom: none !important;
   -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .add-event-day-field::placeholder {
-text-shadow: none;
-color: #fff !important;
+  text-shadow: none;
+  color: #fff !important;
 }
 
 .calendar .add-event-day .add-event-day-field {
@@ -217,8 +219,8 @@ color: #fff !important;
 }
 
 .england {
-background: url("../images/england.png") !important;
-background-repeat: no-repeat;
+  background: url("../images/england.png") !important;
+  background-repeat: no-repeat;
 }
 
 /* Footer */

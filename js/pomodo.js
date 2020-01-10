@@ -27,17 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let isClockStopped = true;
 
- const progressBar = new ProgressBar.Circle("#pomodo-timer", {
-   color: '#212121',
-   strokeWidth: 6,
-   text: {
-     value: "25:00"
-   },
-   trailColor: "#f4f4f4",
-   trailWidth: 1,
-   easing: 'easeInOut',
-   svgStyle: null
- });
+  const progressBar = new ProgressBar.Circle("#pomodo-timer", {
+    color: '#212121',
+    strokeWidth: 6,
+    text: {
+      value: "25:00"
+    },
+    trailColor: "#f4f4f4",
+    trailWidth: 1,
+    easing: 'easeInOut',
+    svgStyle: null
+  });
 
   // Start
   startButton.addEventListener("click", () => {
@@ -167,13 +167,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const setUpdatedTimers = () => {
     if (type === "Work") {
       currentTimeLeftInSession = updatedWorkSessionDuration
-        ? updatedWorkSessionDuration
-        : workSessionDuration;
+      ? updatedWorkSessionDuration
+      : workSessionDuration;
       workSessionDuration = currentTimeLeftInSession;
     } else {
       currentTimeLeftInSession = updatedBreakSessionDuration
-        ? updatedBreakSessionDuration
-        : breakSessionDuration;
+      ? updatedBreakSessionDuration
+      : breakSessionDuration;
       breakSessionDuration = currentTimeLeftInSession;
     }
   };
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const calculateSessionProgress = () => {
     const sessionDuration =
-      type === "Work" ? workSessionDuration : breakSessionDuration;
+    type === "Work" ? workSessionDuration : breakSessionDuration;
     return (timeSpentInCurrentSession / sessionDuration) * 10;
   };
 

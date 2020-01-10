@@ -379,7 +379,7 @@ var Shape = function Shape(container, opts) {
                 left: '50%',
                 top: '50%',
                 padding: 0,
-                margin: 0,
+                margin: '8px',
                 transform: {
                     prefix: true,
                     value: 'translate(-50%, -50%)'
