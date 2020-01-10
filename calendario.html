@@ -2,8 +2,10 @@
 <html lang="it">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>PomoDo</title>
+
+  <!--Mobile optimization-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,8 +22,8 @@
 </head>
 <body>
   <header>
-      <div class="navbar-fixed">
-  <nav>
+    <div class="navbar-fixed">
+      <nav>
         <div class="nav-wrapper white">
           <a href="index.html" class="brand-logo">PomoDo</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -30,17 +32,17 @@
             <li><a href="abitudini.html">Abitudini</a></li>
             <li><a href="calendario.html">Calendario</a></li>
           </ul>
-          </div>
-          </nav>
+        </div>
+      </nav>
     </div>
 
-      <!--Side Navbar-->
-  <ul class="sidenav" id="mobile-demo">
-        <li><div class="user-view">
-          <div class="background">
-            <img src="images/homepage-months/christmas.jpg">
-          </div>
-          <a href="#user"><img class="circle materialboxed" src="images/tomato_color.png">
+    <!--Side Navbar-->
+    <ul class="sidenav" id="mobile-demo">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="images/homepage-months/christmas.jpg">
+        </div>
+        <a href="#user"><img class="circle materialboxed" src="images/tomato_color.png">
           <a href="#name"><span class="white-text name">PomoDo</span></a>
         </div></li>
         <li><a href="index.html">PomoDo</a></li>
@@ -48,74 +50,78 @@
         <li><a href="calendario.html">Calendario</a></li>
       </ul>
       <!--End Side Navbar-->
-  </header>
+    </header>
 
-  <main>
-    <!--Calendar-->
-    <div class="calendar disable-selection col s12 m6" id="calendar">
-      <div class="left-side">
-        <div class="current-day text-center">
-          <h1 class="calendar-left-side-day"></h1>
-          <div class="calendar-left-side-day-of-week"></div>
-        </div>
-        <div class="current-day-events">
-          <div>Eventi correnti:</div>
-          <ul class="current-day-events-list"></ul>
-        </div>
-        <div class="add-event-day">
-          <input type="text" class="add-event-day-field" placeholder="Crea un evento">
-          <span class="fa fa-plus-circle cursor-pointer add-event-day-field-btn"></span>
-        </div>
-      </div>
-      <div class="right-side">
-        <div class="text-right calendar-change-year">
-          <div class="calendar-change-year-slider">
-            <span class="fa fa-caret-left cursor-pointer calendar-change-year-slider-prev"></span>
-            <span class="calendar-current-year"></span>
-            <span class="fa fa-caret-right cursor-pointer calendar-change-year-slider-next"></span>
+    <main>
+      <!--Calendar-->
+      <div class="calendar disable-selection col s12 m6" id="calendar">
+        <div class="left-side">
+          <div class="current-day text-center">
+            <h1 class="calendar-left-side-day"></h1>
+            <div class="calendar-left-side-day-of-week"></div>
+          </div>
+          <div class="current-day-events">
+            <div>Eventi correnti:</div>
+            <ul class="current-day-events-list"></ul>
+          </div>
+          <div class="add-event-day">
+            <input type="text" class="add-event-day-field" placeholder="Crea un evento">
+            <span class="fa fa-plus-circle cursor-pointer add-event-day-field-btn"></span>
           </div>
         </div>
-        <div class="calendar-month-list">
-          <ul class="calendar-month"></ul>
-        </div>
-        <div class="calendar-week-list">
-          <ul class="calendar-week"></ul>
-        </div>
-        <div class="calendar-day-list">
-          <ul class="calendar-days"></ul>
+        <div class="right-side">
+          <div class="text-right calendar-change-year">
+            <div class="calendar-change-year-slider">
+              <span class="fa fa-caret-left cursor-pointer calendar-change-year-slider-prev"></span>
+              <span class="calendar-current-year"></span>
+              <span class="fa fa-caret-right cursor-pointer calendar-change-year-slider-next"></span>
+            </div>
+          </div>
+          <div class="calendar-month-list">
+            <ul class="calendar-month"></ul>
+          </div>
+          <div class="calendar-week-list">
+            <ul class="calendar-week"></ul>
+          </div>
+          <div class="calendar-day-list">
+            <ul class="calendar-days"></ul>
+          </div>
         </div>
       </div>
-    </div>
 
 
-    <!--Floating Action Button-->
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-large grey darken-4">
-        <i class="large fas fa-language"></i>
-      </a>
-      <ul>
-        <li><a class="btn-floating btn-small italy"></a></li>
-        <li><a class="btn-floating btn-small england"></a></li>
-      </ul>
-    </div>
-  </main>
+      <!--Floating Action Button-->
+      <div class="fixed-action-btn">
+        <a class="btn-floating btn-large grey darken-4">
+          <i class="large fas fa-language"></i>
+        </a>
+        <ul>
+          <li><a class="btn-floating btn-small italy"></a></li>
+          <li><a class="btn-floating btn-small england"></a></li>
+        </ul>
+      </div>
+    </main>
 
-  <footer class="page-footer">
-    <div class="grey-text text-darken-4">
-      Creato da <a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
-      Design di <a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
-      Font di <a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
-    </div>
-  </footer>
+    <footer class="page-footer">
+      <div class="grey-text text-darken-4">
+        Creato da <a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
+        Design di <a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
+        Font di <a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
+      </div>
+    </footer>
 
 
-  <!-- Scripts-->
-  <script src="js/background.js"></script>
-  <script src="js/sidenav.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/FloatingActionButton.js"></script>
+    <!-- Scripts-->
+    <script src="js/background.js"></script>
+    <script src="js/sidenav.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/FloatingActionButton.js"></script>
 
-  <!--Calendario-->
-  <script async src="js/calendar.js"></script>
-</body>
-</html>
+    <!--Calendario-->
+    <script async src="js/calendar.js"></script>
+
+    <!--Languages-->
+    <script src="js/i18n.js"></script>
+    
+  </body>
+  </html>
