@@ -2,17 +2,19 @@
 <html lang="it">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>PomoDo</title>
 
-  <!--Ottimizzazione per il cellulare-->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <!--Mobile optimization-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+
+  <!--Habit Tracker-->
+  <link rel="stylesheet"  type="text/css" href="css/nouislider.css">
 
   <!--Icon-->
   <link rel="shortcut icon" type="image/x-icon" href="images/tomato.png" />
@@ -23,8 +25,8 @@
 
 <body>
   <header>
-      <div class="navbar-fixed">
-<nav>
+    <div class="navbar-fixed">
+      <nav>
         <div class="nav-wrapper white">
           <a href="index.html" class="brand-logo">PomoDo</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -33,17 +35,17 @@
             <li><a href="abitudini.html">Abitudini</a></li>
             <li><a href="calendario.html">Calendario</a></li>
           </ul>
-          </div>
-          </nav>
+        </div>
+      </nav>
     </div>
 
-      <!--Side Navbar-->
-<ul class="sidenav" id="mobile-demo">
-        <li><div class="user-view">
-          <div class="background">
-            <img src="images/homepage-months/christmas.jpg">
-          </div>
-          <a href="#user"><img class="circle" style="transform: translateX(175%);" src="images/tomato_color.png">
+    <!--Side Navbar-->
+    <ul class="sidenav" id="mobile-demo">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="images/homepage-months/christmas.jpg">
+        </div>
+        <a href="#user"><img class="circle" style="transform: translateX(175%);" src="images/tomato_color.png">
           <a href="#name"><span class="white-text name">PomoDo</span></a>
         </div></li>
         <li><a href="index.html">PomoDo</a></li>
@@ -51,11 +53,13 @@
         <li><a href="calendario.html">Calendario</a></li>
       </ul>
       <!--End Side Navbar-->
-</header>
+    </header>
 
 
 
     <main>
+      <!--Habit Tracker-->
+      <div id="test-slider"></div>
 
       <!--Floating Action Button-->
       <div class="fixed-action-btn">
@@ -79,11 +83,18 @@
     </footer>
 
 
-    <!--  Scripts-->
+    <!--Scripts-->
     <script src="js/background.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/sidenav.js"></script>
     <script src="js/FloatingActionButton.js"></script>
 
+    <!--Habit Tracker-->
+    <script src="js/nouislider.js"></script>
+    <script src="js/habit.js"></script>
+
+    <!--Languages-->
+    <script src="js/i18n.js"></script>
+    
   </body>
   </html>
