@@ -2,8 +2,10 @@
 <html lang="it">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>PomoDo</title>
+
+  <!--Mobile optimization-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -23,8 +25,8 @@
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="index.html">PomoDo</a></li>
-            <li><a href="abitudini.html">Abitudini</a></li>
-            <li><a href="calendario.html">Calendario</a></li>
+            <li><a class="i18n-habits" href="abitudini.html">Abitudini</a></li>
+            <li><a class="i18n-calendar" href="calendario.html">Calendario</a></li>
           </ul>
         </div>
       </nav>
@@ -40,19 +42,19 @@
           <a href="#name"><span class="white-text name">PomoDo</span></a>
         </div></li>
         <li><a href="index.html">PomoDo</a></li>
-        <li><a href="abitudini.html">Abitudini</a></li>
-        <li><a href="calendario.html">Calendario</a></li>
+        <li><a class="i18n-habits" href="abitudini.html">Abitudini</a></li>
+        <li><a class="i18n-calendar" href="calendario.html">Calendario</a></li>
       </ul>
       <!--End Side Navbar-->
     </header>
 
     <main>
       <div id="pomodo-container" class="row">
-        <div id="pomodo-timer"class="col s6"></div>
+        <div id="pomodo-timer"class="col s12 m6"></div>
 
-        <div id="pomodo-clock" class="col s6">
+        <div id="pomodo-clock" class="col s12 m6">
           <!--Obiettivo-->
-          <div><input type="text" id="pomodo-clock-task" placeholder="Scrivi il tuo obiettivo..."/></div>
+          <div><input type="text" id="pomodo-clock-task" class="i18n-objective" placeholder="Scrivi il tuo obiettivo..."/></div>
 
           <!--Pulsanti-->
           <div id="pomodo-clock-actions">
@@ -67,7 +69,7 @@
 
           <!--Titolo-->
           <div id="pomodo-clock-title">
-            <span style="color: #fafafa; font-weight: bold; font-style: oblique; text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;">
+            <span class="changes" style="color: #fafafa; font-weight: bold; font-style: oblique; text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;">
               I cambiamenti in questa sezione si rifletteranno all'inizio della prossima sessione di lavoro/pausa.
             </span>
           </div>
@@ -75,18 +77,18 @@
           <!--Minuti di lavoro e pausa-->
           <div id="pomodo-clock-actions">
             <div class="pomodo-input">
-              <label>Minuti di lavoro</label>
+              <label class="i18n-min-work">Minuti di lavoro</label>
               <input name="input-work-duration" id="input-work-duration" type="number" />
             </div>
             <div class="pomodo-input">
-              <label>Minuti di pausa</label>
+              <label class="i18n-min-break">Minuti di pausa</label>
               <input name="input-break-duration" id="input-break-duration" type="number" />
             </div>
           </div>
 
           <!--Informazioni sulla sessione-->
           <div id="pomodo-info">
-            <h3>Your Sessions </h3>
+            <h3 class="i18n-session">Your Sessions </h3>
             <ul style="color: #fafafa; text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;" id="pomodo-sessions">
             </ul>
           </div>
@@ -100,18 +102,16 @@
           <i class="large fas fa-language"></i>
         </a>
         <ul>
-          <li><a class="btn-floating btn-small italy"></a></li>
-          <li><a class="btn-floating btn-small england"></a></li>
+          <li><a href="index.html" data-lang="it" class="btn-floating btn-small translate-btn italy"></a></li>
+          <li><a href="index.html" data-lang="eng" class="btn-floating btn-small translate-btn england"></a></li>
         </ul>
       </div>
     </main>
 
     <footer class="page-footer">
-      <div class="grey-text text-darken-4">
-        Creato da <a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
-        Design di <a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
-        Font di <a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
-      </div>
+        <div class="create grey-text text-darken-4">Creato da&nbsp;</div><a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
+        <div class="design grey-text text-darken-4">&nbsp;Design di&nbsp;</div><a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
+        <div class="font grey-text text-darken-4">&nbsp;Font di&nbsp;</div><a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
     </footer>
 
 
@@ -122,6 +122,9 @@
     <script src="js/materialize.js"></script>
     <script src="js/sidenav.js"></script>
     <script src="js/FloatingActionButton.js"></script>
+
+    <!--Languages-->
+    <script src="js/i18n.js"></script>
 
   </body>
   </html>
