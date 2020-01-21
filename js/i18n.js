@@ -12,9 +12,12 @@ $(function(){
       'min-break' : 'Break Duration',
       'session' : 'Your Sessions',
       //Footer
-      'create' : 'Created by ',
-      'design' : 'Designed by ',
-      'font' : 'Font by ',
+      'create' : 'Created by\xa0',
+      'design' : '\xa0Designed by\xa0',
+      'font' : '\xa0Font by\xa0',
+      //Events
+      'events' : 'Current events:',
+      'createEvent' : 'Create a new event',
     },
   };
 
