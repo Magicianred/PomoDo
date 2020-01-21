@@ -29,8 +29,8 @@
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="index.html">PomoDo</a></li>
-            <li><a href="abitudini.html">Abitudini</a></li>
-            <li><a href="calendario.html">Calendario</a></li>
+            <li><a class="i18n-habits" href="abitudini.html">Abitudini</a></li>
+            <li><a class="i18n-calendar" href="calendario.html">Calendario</a></li>
           </ul>
         </div>
       </nav>
@@ -46,8 +46,8 @@
           <a href="#name"><span class="white-text name">PomoDo</span></a>
         </div></li>
         <li><a href="index.html">PomoDo</a></li>
-        <li><a href="abitudini.html">Abitudini</a></li>
-        <li><a href="calendario.html">Calendario</a></li>
+        <li><a class="i18n-habits" href="abitudini.html">Abitudini</a></li>
+        <li><a class="i18n-calendar" href="calendario.html">Calendario</a></li>
       </ul>
       <!--End Side Navbar-->
     </header>
@@ -58,14 +58,14 @@
         <div class="left-side">
           <div class="current-day text-center">
             <h1 class="calendar-left-side-day"></h1>
-            <div class="calendar-left-side-day-of-week"></div>
+            <div class="calendar-left-side-day-of-week i18n-currentWeekDay"></div>
           </div>
           <div class="current-day-events">
-            <div>Eventi correnti:</div>
+            <div class="i18n-events">Eventi correnti:</div>
             <ul class="current-day-events-list"></ul>
           </div>
           <div class="add-event-day">
-            <input type="text" class="add-event-day-field" placeholder="Crea un evento">
+            <input type="text" class="add-event-day-field i18n-createEvent" placeholder="Crea un nuovo evento">
             <span class="fa fa-plus-circle cursor-pointer add-event-day-field-btn"></span>
           </div>
         </div>
@@ -96,18 +96,16 @@
           <i class="large fas fa-language"></i>
         </a>
         <ul>
-          <li><a class="btn-floating btn-small italy"></a></li>
-          <li><a class="btn-floating btn-small england"></a></li>
+          <li><a href="#" data-lang="it" class="btn-floating btn-small translate-btn italy"></a></li>
+          <li><a href="#" data-lang="en" class="btn-floating btn-small translate-btn england"></a></li>
         </ul>
       </div>
     </main>
 
     <footer class="page-footer">
-      <div class="grey-text text-darken-4">
-        Creato da <a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
-        Design di <a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
-        Font di <a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
-      </div>
+        <div class="i18n-create grey-text text-darken-4">Creato da&nbsp;</div><a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
+        <div class="i18n-design grey-text text-darken-4">&nbsp;Design di&nbsp;</div><a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
+        <div class="i18n-font grey-text text-darken-4">&nbsp;Font di&nbsp;</div><a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
     </footer>
 
 
@@ -121,7 +119,8 @@
     <script async src="js/calendar.js"></script>
 
     <!--Languages-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/i18n.js"></script>
-    
+
   </body>
   </html>
