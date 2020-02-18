@@ -11,6 +11,12 @@ $(function(){
       'min-work' : 'Work Duration',
       'min-break' : 'Break Duration',
       'session' : 'Your Sessions',
+      //To Do List
+      'add' : 'Add',
+      'write' : 'Write here...',
+      'done' : 'Done',
+      'todo' : 'To Do',
+      'mytodolist' : 'My to Do List',
       //Footer
       'create' : 'Created by\xa0',
       'design' : '\xa0Designed by\xa0',

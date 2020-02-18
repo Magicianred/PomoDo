@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html class="todo" lang="it">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>PomoDo</title>
@@ -13,9 +13,6 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
 
-  <!--Habit Tracker-->
-  <link rel="stylesheet"  type="text/css" href="css/nouislider.css">
-
   <!--Icon-->
   <link rel="shortcut icon" type="image/x-icon" href="images/tomato.png" />
 </head>
@@ -23,7 +20,7 @@
 
 
 
-<body>
+<body class="todo">
   <header>
     <div class="navbar-fixed">
       <nav>
@@ -58,8 +55,17 @@
 
 
     <main>
-      <!--Habit Tracker-->
-      <div id="test-slider"></div>
+      <!--Habit-->
+      <div id="myDIV" class="header">
+        <h2 class="i18n-mytodolist">Cose da fare</h2>
+        <input type="text" id="myInput" class="i18n-write" placeholder="Scrivi qui...">
+        <span onclick="newElement()" class="addBtn i18n-add">Aggiungi</span>
+      </div>
+
+      <ul id="myUL">
+        <li class="i18n-todo objectdo">Non ancora fatto</li>
+        <li class="checked i18n-done objectdo">Fatto</li>
+      </ul>
 
       <!--Floating Action Button-->
       <div class="fixed-action-btn">
@@ -75,9 +81,9 @@
 
 
     <footer class="page-footer">
-        <div class="i18n-create grey-text text-darken-4">Creato da&nbsp;</div><a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
-        <div class="i18n-design grey-text text-darken-4">&nbsp;Design di&nbsp;</div><a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
-        <div class="i18n-font grey-text text-darken-4">&nbsp;Font di&nbsp;</div><a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
+      <div class="i18n-create grey-text text-darken-4">Creato da&nbsp;</div><a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
+      <div class="i18n-design grey-text text-darken-4">&nbsp;Design di&nbsp;</div><a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
+      <div class="i18n-font grey-text text-darken-4">&nbsp;Font di&nbsp;</div><a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
     </footer>
 
 
@@ -87,13 +93,13 @@
     <script src="js/sidenav.js"></script>
     <script src="js/FloatingActionButton.js"></script>
 
-    <!--Habit Tracker-->
-    <script src="js/nouislider.js"></script>
+    <!--Habit-->
     <script src="js/habit.js"></script>
 
     <!--Languages-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/i18n.js"></script>
+
 
   </body>
   </html>
