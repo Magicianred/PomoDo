@@ -11,12 +11,10 @@ $(function(){
       'min-work' : 'Work Duration',
       'min-break' : 'Break Duration',
       'session' : 'Your Sessions',
-      //To Do List
-      'add' : 'Add',
-      'write' : 'Write here...',
-      'done' : 'Done',
-      'todo' : 'To Do',
-      'mytodolist' : 'My to Do List',
+      //Habit
+      'addHabit' : 'Habits',
+      'habitDescription' : 'What do you want to get done everyday?',
+      'exampleHabit' : 'Example: Drinking 2 liters of water per day',
       //Footer
       'create' : 'Created by\xa0',
       'design' : '\xa0Designed by\xa0',

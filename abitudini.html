@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="todo" lang="it">
+<html lang="it">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>PomoDo</title>
@@ -20,7 +20,7 @@
 
 
 
-<body class="todo">
+<body>
   <header>
     <div class="navbar-fixed">
       <nav>
@@ -55,17 +55,22 @@
 
 
     <main>
-      <!--Habit-->
-      <div id="myDIV" class="header">
-        <h2 class="i18n-mytodolist">Cose da fare</h2>
-        <input type="text" id="myInput" class="i18n-write" placeholder="Scrivi qui...">
-        <span onclick="newElement()" class="addBtn i18n-add">Aggiungi</span>
-      </div>
 
-      <ul id="myUL">
-        <li class="i18n-todo objectdo">Non ancora fatto</li>
-        <li class="checked i18n-done objectdo">Fatto</li>
-      </ul>
+      <!--Habit-->
+      <div class="containerHabit">
+        <div class="center-align">
+        <img src="images/habit.png">
+      </div>
+        <ul class="todo-list js-todo-list"></ul>
+        <div class="empty-state">
+          <h2 class="empty-state__title i18n-addHabit">Abitudini</h2>
+          <p class="empty-state__description i18n-habitDescription">Cosa vorresti fare ogni giorno?</p>
+        </div>
+        <form class="js-form">
+          <input autofocus type="text" placeholder="Esempio: Bere 2 litri d'acqua al giorno" class="js-todo-input i18n-exampleHabit">
+        </form>
+      </div>
+      <!--End Habit-->
 
       <!--Floating Action Button-->
       <div class="fixed-action-btn">
@@ -79,27 +84,27 @@
       </div>
     </main>
 
-
     <footer class="page-footer">
       <div class="i18n-create grey-text text-darken-4">Creato da&nbsp;</div><a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
       <div class="i18n-design grey-text text-darken-4">&nbsp;Design di&nbsp;</div><a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
       <div class="i18n-font grey-text text-darken-4">&nbsp;Font di&nbsp;</div><a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
-    </footer>
+      <div class="i18n-font grey-text text-darken-4">&nbsp;Icone di&nbsp;<a href="https://www.flaticon.com" title="Freepik" class="brown-text text-darken-3">Freepik</a>
+      </footer>
 
 
-    <!--Scripts-->
-    <script src="js/background.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/sidenav.js"></script>
-    <script src="js/FloatingActionButton.js"></script>
+      <!--Scripts-->
+      <script src="js/background.js"></script>
+      <script src="js/materialize.js"></script>
+      <script src="js/sidenav.js"></script>
+      <script src="js/FloatingActionButton.js"></script>
 
-    <!--Habit-->
-    <script src="js/habit.js"></script>
+      <!--Habit-->
+      <script src="js/habit.js"></script>
 
-    <!--Languages-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/i18n.js"></script>
+      <!--Languages-->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="js/i18n.js"></script>
 
 
-  </body>
-  </html>
+    </body>
+    </html>
