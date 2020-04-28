@@ -287,26 +287,24 @@ content:  url("../images/remove.png");
 .tick {
   width: 30px;
   height: 30px;
-  border: 3px solid #212121;
+  background-color: white;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  box-shadow: inset 0 1px 10px rgba(0,0,0,.3)
 }
 
 .tick::before {
   content: '✓';
   font-size: 20px;
   display: none;
-  border: none !important;
-  background-color: #212121;
+  color: black;
 }
 
 .done .tick::before {
   display: inline;
-  border: none !important;
-  background-color: #212121;
 }
 
 .delete-todo {
