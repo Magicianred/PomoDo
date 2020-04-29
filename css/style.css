@@ -293,7 +293,7 @@ content:  url("../images/remove.png");
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: inset 0 1px 10px rgba(0,0,0,.3)
+  box-shadow: inset 0 1px 10px rgba(0,0,0,.3);
 }
 
 .tick::before {
