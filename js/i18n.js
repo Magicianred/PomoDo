@@ -22,6 +22,9 @@ $(function(){
       //Events
       'events' : 'Current events:',
       'createEvent' : 'Create a new event',
+      //404
+      'error' : '404 ERROR',
+      'darth' : 'You underestimate the power of the dark side',
     },
   };
 
