@@ -16,17 +16,7 @@
   <!--Icon-->
   <link rel="shortcut icon" type="image/x-icon" href="images/tomato.png" />
 </head>
-<body data-barba="wrapper">
-
-<!--Transition with bands-->
-  <ul class="transition">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-
+<body>
   <header>
     <div class="navbar-fixed">
       <nav>
@@ -58,9 +48,9 @@
       <!--End Side Navbar-->
     </header>
 
-    <main data-barba="container" data-barba-namespace="home">
+    <main>
       <div id="pomodo-container" class="row">
-        <div class="disappear"><div id="pomodo-timer"class="col s2 m6"></div></div>
+        <div id="pomodo-timer"class="col s2 m6"></div>
 
         <div id="pomodo-clock" class="col s2 m6">
           <!--Obiettivo-->
@@ -136,11 +126,6 @@
     <!--Languages-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/i18n.js"></script>
-
-    <!--Page Transition with Barba.js and GSAP-->
-    <script src="https://unpkg.com/@barba/core"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-    <script src="js/pageTransition.js"></script>
 
   </body>
   </html>
