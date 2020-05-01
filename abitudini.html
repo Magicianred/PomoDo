@@ -20,7 +20,17 @@
 
 
 
-<body>
+<body data-barba="wrapper">
+
+  <!--Transition with bands-->
+    <ul class="transition">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    
   <header>
     <div class="navbar-fixed">
       <nav>
@@ -54,7 +64,7 @@
 
 
 
-    <main>
+    <main data-barba="container" data-barba-namespace="home">
 
       <!--Habit-->
       <div class="containerHabit">
@@ -105,9 +115,10 @@
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script src="js/i18n.js"></script>
 
-      <!--Barba-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
-
+      <!--Page Transition with Barba.js and GSAP-->
+      <script src="https://unpkg.com/@barba/core"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+      <script src="js/pageTransition.js"></script>
 
     </body>
     </html>

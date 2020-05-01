@@ -378,3 +378,13 @@ font-family: 'Varela Round', sans-serif;
 text-align: center;
 color: black;
 }
+
+/*Page Transition with Barba.js and GSAP*/
+.wrapper {
+  padding: 1em;
+}
+
+.disappear {
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
