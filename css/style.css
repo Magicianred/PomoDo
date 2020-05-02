@@ -280,10 +280,6 @@ input[type="checkbox"] {
   display: none;
 }
 
-#delete-icon {
-content:  url("../images/remove.png");
-}
-
 .tick {
   width: 30px;
   height: 30px;
