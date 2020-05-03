@@ -19,18 +19,22 @@
   <!--Icon-->
   <link rel="shortcut icon" type="image/x-icon" href="images/tomato.png" />
 
+  <!--Page Transition-->
+  <link rel="stylesheet" href="css/animsition.min.css">
+
 </head>
 <body>
+  <div class="animsition">
   <header>
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper white">
-          <a href="index.html" class="brand-logo">PomoDo</a>
+          <a href="index.html" class="brand-logo animsition-link">PomoDo</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="index.html">PomoDo</a></li>
-            <li><a class="i18n-habits" href="abitudini.html">Abitudini</a></li>
-            <li><a class="i18n-calendar" href="calendario.html">Calendario</a></li>
+            <li><a href="index.html" class="animsition-link">PomoDo</a></li>
+            <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
+            <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
           </ul>
         </div>
       </nav>
@@ -45,9 +49,9 @@
         <a href="#user"><img class="circle materialboxed" src="images/tomato_color.png">
           <a href="#name"><span class="white-text name">PomoDo</span></a>
         </div></li>
-        <li><a href="index.html">PomoDo</a></li>
-        <li><a class="i18n-habits" href="abitudini.html">Abitudini</a></li>
-        <li><a class="i18n-calendar" href="calendario.html">Calendario</a></li>
+        <li><a href="index.html" class="animsition-link">PomoDo</a></li>
+        <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
+        <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
       </ul>
       <!--End Side Navbar-->
     </header>
@@ -109,7 +113,7 @@
       <div class="i18n-font grey-text text-darken-4">&nbsp;Font di&nbsp;</div><a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
     </footer>
     <!--End Footer-->
-
+</div>
     <!-- Scripts-->
     <script src="js/background.js"></script>
     <script src="js/sidenav.js"></script>
@@ -124,6 +128,7 @@
     <script src="js/i18n.js"></script>
 
     <!--Page Transition-->
+    <script src="js/animsition.min.js"></script>
     <script src="js/pageTransition.js"></script>
 
   </body>
