@@ -370,7 +370,7 @@ footer {
 
 /*Error 404*/
 .error404 {
-font-family: 'Varela Round', sans-serif;
-text-align: center;
-color: black;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  color: black;
 }

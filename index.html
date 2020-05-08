@@ -4,10 +4,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>PomoDo</title>
 
-  <!--Mobile optimization-->
+  <!--Mobile Optimization-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 
-  <!-- CSS  -->
+  <!--CSS-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -22,115 +22,118 @@
 </head>
 <body>
   <div class="animsition">
-  <header>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper white">
-          <a href="index.html" class="brand-logo animsition-link">PomoDo</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="index.html" class="animsition-link">PomoDo</a></li>
-            <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
-            <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-
-    <!--Side Navbar-->
-    <ul class="sidenav" id="mobile-demo">
-      <li><div class="user-view">
-        <div class="background">
-          <img src="images/homepage-months/christmas.jpg">
-        </div>
-        <a href="#user"><img class="circle materialboxed" src="images/tomato_color.png">
-          <a href="#name"><span class="white-text name">PomoDo</span></a>
-        </div></li>
-        <li><a href="index.html" class="animsition-link">PomoDo</a></li>
-        <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
-        <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
-      </ul>
-      <!--End Side Navbar-->
-    </header>
-
-    <main>
-      <div id="pomodo-container" class="row">
-        <div id="pomodo-timer"class="col s2 m6"></div>
-
-        <div id="pomodo-clock" class="col s2 m6">
-          <!--Obiettivo-->
-          <div><input type="text" id="pomodo-clock-task" class="i18n-objective" placeholder="Scrivi il tuo obiettivo..."/></div>
-
-          <!--Pulsanti-->
-          <div id="pomodo-clock-actions">
-            <button id="pomodo-start" class="waves-effect btn grey lighten-4">
-              <i class="fas fa-play" id="play-icon"></i>
-              <i class="fas fa-pause hidden" id="pause-icon"></i>
-            </button>
-            <button id="pomodo-stop" class="hidden waves-effect btn grey lighten-4">
-              <i class="fas fa-stop"></i>
-            </button>
-          </div>
-
-          <!--Titolo-->
-          <div id="pomodo-clock-title">
-            <span class="i18n-changes" style="color: #fafafa; font-weight: bold; font-style: oblique; text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;">
-              I cambiamenti in questa sezione si rifletteranno all'inizio della prossima sessione di lavoro/pausa.
-            </span>
-          </div>
-
-          <!--Minuti di lavoro e pausa-->
-          <div id="pomodo-clock-actions">
-            <div class="pomodo-input">
-              <label class="i18n-min-work">Minuti di lavoro</label>
-              <input name="input-work-duration" id="input-work-duration" type="number" />
-            </div>
-            <div class="pomodo-input">
-              <label class="i18n-min-break">Minuti di pausa</label>
-              <input name="input-break-duration" id="input-break-duration" type="number" />
-            </div>
-          </div>
-
-          <!--Informazioni sulla sessione-->
-          <div id="pomodo-info">
-            <h3 class="i18n-session">Le tue Sessioni </h3>
-            <ul style="color: #fafafa; text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;" id="pomodo-sessions">
+    <header>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper white">
+            <a href="index.html" class="brand-logo animsition-link">PomoDo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="index.html" class="animsition-link">PomoDo</a></li>
+              <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
+              <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
             </ul>
           </div>
-        </div>
+        </nav>
       </div>
 
-
-      <!--Floating Action Button-->
-      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large grey darken-4">
-          <i class="large fas fa-language"></i>
-        </a>
-        <ul>
-          <li><a href="#" data-lang="it" class="btn-floating btn-small translate-btn italy"></a></li>
-          <li><a href="#" data-lang="en" class="btn-floating btn-small translate-btn england"></a></li>
+      <!--Side Navbar-->
+      <ul class="sidenav" id="mobile-demo">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="images/homepage-months/christmas.jpg">
+          </div>
+          <a href="#user"><img class="circle materialboxed" src="images/tomato_color.png">
+            <a href="#name"><span class="white-text name">PomoDo</span></a>
+          </div></li>
+          <li><a href="index.html" class="animsition-link">PomoDo</a></li>
+          <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
+          <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
         </ul>
-      </div>
-    </main>
+        <!--End Side Navbar-->
+      </header>
 
-    <!--Footer-->
-    <footer class="page-footer">
-      <div class="i18n-create grey-text text-darken-4">Creato da&nbsp;</div><a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
-      <div class="i18n-design grey-text text-darken-4">&nbsp;Design di&nbsp;</div><a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
-      <div class="i18n-font grey-text text-darken-4">&nbsp;Font di&nbsp;</div><a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
-    </footer>
-    <!--End Footer-->
-  </div>
+      <main>
+        <!--PomoDo-->
+        <div id="pomodo-container" class="row">
+          <div id="pomodo-timer"class="col s2 m6"></div>
 
-    <!--  Scripts-->
+          <div id="pomodo-clock" class="col s2 m6">
+            <!--Target-->
+            <div><input type="text" id="pomodo-clock-task" class="i18n-objective" placeholder="Scrivi il tuo obiettivo..."/></div>
+
+            <!--Buttons-->
+            <div id="pomodo-clock-actions">
+              <button id="pomodo-start" class="waves-effect btn grey lighten-4">
+                <i class="fas fa-play" id="play-icon"></i>
+                <i class="fas fa-pause hidden" id="pause-icon"></i>
+              </button>
+              <button id="pomodo-stop" class="hidden waves-effect btn grey lighten-4">
+                <i class="fas fa-stop"></i>
+              </button>
+            </div>
+
+            <!--Description-->
+            <div id="pomodo-clock-title">
+              <span class="i18n-changes" style="color: #fafafa; font-weight: bold; font-style: oblique; text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;">
+                I cambiamenti in questa sezione si rifletteranno all'inizio della prossima sessione di lavoro/pausa.
+              </span>
+            </div>
+
+            <!--Minutes of Work and Break-->
+            <div id="pomodo-clock-actions">
+              <div class="pomodo-input">
+                <label class="i18n-min-work">Minuti di lavoro</label>
+                <input name="input-work-duration" id="input-work-duration" type="number" />
+              </div>
+              <div class="pomodo-input">
+                <label class="i18n-min-break">Minuti di pausa</label>
+                <input name="input-break-duration" id="input-break-duration" type="number" />
+              </div>
+            </div>
+
+            <!--Session Information-->
+            <div id="pomodo-info">
+              <h3 class="i18n-session">Le tue Sessioni </h3>
+              <ul style="color: #fafafa; text-shadow: 1px 1px 2px #000, 1px 1px 2px #000;" id="pomodo-sessions">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--End PomoDo-->
+
+
+        <!--Translation Button-->
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large grey darken-4">
+            <i class="large fas fa-language"></i>
+          </a>
+          <ul>
+            <li><a href="#" data-lang="it" class="btn-floating btn-small translate-btn italy"></a></li>
+            <li><a href="#" data-lang="en" class="btn-floating btn-small translate-btn england"></a></li>
+          </ul>
+        </div>
+      </main>
+      <!--End Translation Button-->
+
+      <!--Footer-->
+      <footer class="page-footer">
+        <div class="i18n-create grey-text text-darken-4">Creato da&nbsp;</div><a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
+        <div class="i18n-design grey-text text-darken-4">&nbsp;Design di&nbsp;</div><a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
+        <div class="i18n-font grey-text text-darken-4">&nbsp;Font di&nbsp;</div><a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
+      </footer>
+      <!--End Footer-->
+    </div>
+
+    <!--Scripts-->
     <script src="js/background.js"></script>
     <script src='js/progressBar.js'></script>
     <script src="js/pomodo.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/sidenav.js"></script>
-    <script src="js/FloatingActionButton.js"></script>
 
-    <!--Languages-->
+    <!--Translation Button-->
+    <script src="js/FloatingActionButton.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/i18n.js"></script>
 

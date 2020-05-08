@@ -4,16 +4,16 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>PomoDo</title>
 
-  <!--Mobile optimization-->
+  <!--Mobile Optimization-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 
-  <!-- CSS  -->
+  <!--CSS-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
 
-  <!--Calendario-->
+  <!--Calendar-->
   <link rel="stylesheet" href="css/calendar.css">
 
   <!--Icon-->
@@ -25,105 +25,108 @@
 </head>
 <body>
   <div class="animsition">
-  <header>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper white">
-          <a href="index.html" class="brand-logo animsition-link">PomoDo</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="index.html" class="animsition-link">PomoDo</a></li>
-            <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
-            <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <header>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper white">
+            <a href="index.html" class="brand-logo animsition-link">PomoDo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="index.html" class="animsition-link">PomoDo</a></li>
+              <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
+              <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
 
-    <!--Side Navbar-->
-    <ul class="sidenav" id="mobile-demo">
-      <li><div class="user-view">
-        <div class="background">
-          <img src="images/homepage-months/christmas.jpg">
-        </div>
-        <a href="#user"><img class="circle materialboxed" src="images/tomato_color.png">
-          <a href="#name"><span class="white-text name">PomoDo</span></a>
-        </div></li>
-        <li><a href="index.html" class="animsition-link">PomoDo</a></li>
-        <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
-        <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
-      </ul>
-      <!--End Side Navbar-->
-    </header>
+      <!--Side Navbar-->
+      <ul class="sidenav" id="mobile-demo">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="images/homepage-months/christmas.jpg">
+          </div>
+          <a href="#user"><img class="circle materialboxed" src="images/tomato_color.png">
+            <a href="#name"><span class="white-text name">PomoDo</span></a>
+          </div></li>
+          <li><a href="index.html" class="animsition-link">PomoDo</a></li>
+          <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
+          <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
+        </ul>
+        <!--End Side Navbar-->
+      </header>
 
-    <main>
-      <!--Calendar-->
-      <div class="calendar disable-selection col s12 m6" id="calendar">
-        <div class="left-side">
-          <div class="current-day text-center">
-            <h1 class="calendar-left-side-day"></h1>
-            <div class="calendar-left-side-day-of-week i18n-currentWeekDay"></div>
-          </div>
-          <div class="current-day-events">
-            <div class="i18n-events">Eventi correnti:</div>
-            <ul class="current-day-events-list"></ul>
-          </div>
-          <div class="add-event-day">
-            <input type="text" class="add-event-day-field i18n-createEvent" placeholder="Crea un nuovo evento">
-            <span class="fa fa-plus-circle cursor-pointer add-event-day-field-btn"></span>
-          </div>
-        </div>
-        <div class="right-side">
-          <div class="text-right calendar-change-year">
-            <div class="calendar-change-year-slider">
-              <span class="fa fa-caret-left cursor-pointer calendar-change-year-slider-prev"></span>
-              <span class="calendar-current-year"></span>
-              <span class="fa fa-caret-right cursor-pointer calendar-change-year-slider-next"></span>
+      <main>
+        <!--Calendar-->
+        <div class="calendar disable-selection col s12 m6" id="calendar">
+          <div class="left-side">
+            <div class="current-day text-center">
+              <h1 class="calendar-left-side-day"></h1>
+              <div class="calendar-left-side-day-of-week i18n-currentWeekDay"></div>
+            </div>
+            <div class="current-day-events">
+              <div class="i18n-events">Eventi correnti:</div>
+              <ul class="current-day-events-list"></ul>
+            </div>
+            <div class="add-event-day">
+              <input type="text" class="add-event-day-field i18n-createEvent" placeholder="Crea un nuovo evento">
+              <span class="fa fa-plus-circle cursor-pointer add-event-day-field-btn"></span>
             </div>
           </div>
-          <div class="calendar-month-list">
-            <ul class="calendar-month"></ul>
-          </div>
-          <div class="calendar-week-list">
-            <ul class="calendar-week"></ul>
-          </div>
-          <div class="calendar-day-list">
-            <ul class="calendar-days"></ul>
+          <div class="right-side">
+            <div class="text-right calendar-change-year">
+              <div class="calendar-change-year-slider">
+                <span class="fa fa-caret-left cursor-pointer calendar-change-year-slider-prev"></span>
+                <span class="calendar-current-year"></span>
+                <span class="fa fa-caret-right cursor-pointer calendar-change-year-slider-next"></span>
+              </div>
+            </div>
+            <div class="calendar-month-list">
+              <ul class="calendar-month"></ul>
+            </div>
+            <div class="calendar-week-list">
+              <ul class="calendar-week"></ul>
+            </div>
+            <div class="calendar-day-list">
+              <ul class="calendar-days"></ul>
+            </div>
           </div>
         </div>
-      </div>
+        <!--End Calendar-->
 
 
-      <!--Floating Action Button-->
-      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large grey darken-4">
-          <i class="large fas fa-language"></i>
-        </a>
-        <ul>
-          <li><a href="#" data-lang="it" class="btn-floating btn-small translate-btn italy"></a></li>
-          <li><a href="#" data-lang="en" class="btn-floating btn-small translate-btn england"></a></li>
-        </ul>
-      </div>
-    </main>
+        <!--Translation Button-->
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large grey darken-4">
+            <i class="large fas fa-language"></i>
+          </a>
+          <ul>
+            <li><a href="#" data-lang="it" class="btn-floating btn-small translate-btn italy"></a></li>
+            <li><a href="#" data-lang="en" class="btn-floating btn-small translate-btn england"></a></li>
+          </ul>
+        </div>
+      </main>
+      <!--End Translation Button-->
 
-    <!--Footer-->
-    <footer class="page-footer">
-      <div class="i18n-create grey-text text-darken-4">Creato da&nbsp;</div><a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
-      <div class="i18n-design grey-text text-darken-4">&nbsp;Design di&nbsp;</div><a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
-      <div class="i18n-font grey-text text-darken-4">&nbsp;Font di&nbsp;</div><a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
-    </footer>
-    <!--End Footer-->
-</div>
+      <!--Footer-->
+      <footer class="page-footer">
+        <div class="i18n-create grey-text text-darken-4">Creato da&nbsp;</div><a class="brown-text text-darken-3" href="http://www.carmensantoro.it">Santoro Carmen Agnese</a>
+        <div class="i18n-design grey-text text-darken-4">&nbsp;Design di&nbsp;</div><a class="brown-text text-darken-3" href="http://materializecss.com">Materialize</a>
+        <div class="i18n-font grey-text text-darken-4">&nbsp;Font di&nbsp;</div><a href="http://www.bleutuna.com/" class="brown-text text-darken-3">Bleutuna</a>
+      </footer>
+      <!--End Footer-->
+    </div>
+
     <!-- Scripts-->
     <script src="js/background.js"></script>
     <script src="js/sidenav.js"></script>
     <script src="js/materialize.js"></script>
-    <script src="js/FloatingActionButton.js"></script>
 
     <!--Calendario-->
     <script async src="js/calendar.js"></script>
 
-    <!--Languages-->
+    <!--Translation Button-->
+    <script src="js/FloatingActionButton.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/i18n.js"></script>
 
