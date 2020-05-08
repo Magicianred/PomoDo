@@ -8,14 +8,12 @@ $(document).ready(function() {
     loading: true,
     loadingParentElement: 'body',
     loadingClass: 'animsition-loading',
-    loadingInner: '',
-    timeout: false,
+    timeout: true,
     timeoutCountdown: 5000,
     onLoadEvent: true,
     browser: [ 'animation-duration', '-webkit-animation-duration'],
     overlay : false,
     overlayClass : 'animsition-overlay-slide',
     overlayParentElement : 'body',
-    transition: function(url){ window.location.href = url; }
   });
 });
