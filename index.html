@@ -84,11 +84,11 @@
             <div id="pomodo-clock-actions">
               <div class="pomodo-input">
                 <label class="i18n-min-work">Minuti di lavoro</label>
-                <input name="input-work-duration" id="input-work-duration" type="number" />
+                <input name="input-work-duration" id="input-work-duration" type="number" class="validate"/>
               </div>
               <div class="pomodo-input">
                 <label class="i18n-min-break">Minuti di pausa</label>
-                <input name="input-break-duration" id="input-break-duration" type="number" />
+                <input name="input-break-duration" id="input-break-duration" type="number" class="validate"/>
               </div>
             </div>
 
@@ -124,6 +124,9 @@
       </footer>
       <!--End Footer-->
     </div>
+
+    <div class="i18n-work" style="display: none">Lavoro</div>
+    <div class="i18n-break" style="display: none">Pausa</div>
 
     <!--Scripts-->
     <script src="js/background.js"></script>

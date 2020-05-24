@@ -12,6 +12,8 @@ $(function(){
       'min-work' : 'Work Duration',
       'min-break' : 'Break Duration',
       'session' : 'Your Sessions',
+      'work' : 'Work',
+      'break' : 'Break',
 
       //Habit
       'addHabit' : 'Habits',

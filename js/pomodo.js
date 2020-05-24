@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     displayCurrentTimeLeftInSession();
     type = "Work";
     timeSpentInCurrentSession = 0;
+    currentTaskLabel.disabled = false;
   };
 
   const stepDown = () => {
@@ -121,26 +122,26 @@ document.addEventListener("DOMContentLoaded", () => {
       currentTimeLeftInSession--;
       timeSpentInCurrentSession++;
     } else if (currentTimeLeftInSession === 0) {
-      timeSpentInCurrentSession = 0;
       if (type === "Work") {
         currentTimeLeftInSession = breakSessionDuration;
         displaySessionLog("Work");
         type = "Break";
         setUpdatedTimers();
         // new
-        currentTaskLabel.value = "Break";
+        currentTaskLabel.value = $('.i18n-break').text();
         currentTaskLabel.disabled = true;
       } else {
         currentTimeLeftInSession = workSessionDuration;
         type = "Work";
         setUpdatedTimers();
         // new
-        if (currentTaskLabel.value === "Break") {
+        if (currentTaskLabel.value === $('.i18n-break').text()) {
           currentTaskLabel.value = workSessionLabel;
         }
         currentTaskLabel.disabled = false;
         displaySessionLog("Break");
       }
+      timeSpentInCurrentSession = 0;
     }
     displayCurrentTimeLeftInSession();
   };
@@ -149,10 +150,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const sessionsList = document.querySelector("#pomodo-sessions");
     const li = document.createElement("li");
     if (type === "Work") {
-      sessionLabel = currentTaskLabel.value ? currentTaskLabel.value : "Work";
+      sessionLabel = currentTaskLabel.value ? currentTaskLabel.value : $('.i18n-work').text();
       workSessionLabel = sessionLabel;
     } else {
-      sessionLabel = "Break";
+      sessionLabel = $('.i18n-break').text();
     }
     let elapsedTime = parseInt(timeSpentInCurrentSession / 60);
     elapsedTime = elapsedTime > 0 ? elapsedTime : "< 1";
