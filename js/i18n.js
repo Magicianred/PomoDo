@@ -5,26 +5,63 @@ $(function(){
       // Navbar and Sidenav
       'habits': 'Habits',
       'calendar': 'Calendar',
+
       //PomoDo
       'objective' : 'Write here your objective...',
       'changes' : 'Changes made here will reflect at the start of the next work/break session.',
       'min-work' : 'Work Duration',
       'min-break' : 'Break Duration',
       'session' : 'Your Sessions',
+
       //Habit
       'addHabit' : 'Habits',
       'habitDescription' : 'What do you want to get done everyday?',
       'exampleHabit' : 'Example: Drinking 2 liters of water per day',
+
       //Footer
       'create' : 'Created by\xa0',
       'design' : '\xa0Designed by\xa0',
       'font' : '\xa0Font by\xa0',
+
       //Events
       'events' : 'Current events:',
       'createEvent' : 'Create a new event',
+
       //404
       'error' : '404 ERROR',
       'darth' : 'You underestimate the power of the dark side',
+
+      //Calendar
+      'noEvents' : 'No events',
+      //Complete Week Days
+      'Domenica' : 'Sunday',
+      'Lunedì' : 'Monday',
+      'Martedì' : 'Tuesday',
+      'Mercoledì' : 'Wednesday',
+      'Giovedì' : 'Thursday',
+      'Venerdì' : 'Friday',
+      'Sabato' : 'Saturday',
+      //Week Days with 3 letters
+      'Dom' : 'Sun',
+      'Lun' : 'Mon',
+      'Mar' : 'Tue',
+      'Mer' : 'Wed',
+      'Gio' : 'Thu',
+      'Ven' : 'Fri',
+      'Sab' : 'Sat',
+      //Months
+      'Gen' : 'Jan',
+      'Feb' : 'Feb',
+      'Mar' : 'Mar',
+      'Apr' : 'Apr',
+      'Mag' : 'May',
+      'Giu' : 'Jun',
+      'Lug' : 'Jul',
+      'Ago' : 'Aug',
+      'Set' : 'Sep',
+      'Ott' : 'Oct',
+      'Nov' : 'Nov',
+      'Dic' : 'Dec',
     },
   };
 

@@ -44,19 +44,32 @@ class CALENDAR {
 
   drawEvents() {
     let calendar = this.getCalendar();
-    let eventList = this.eventList[calendar.active.formatted] || ['Nessun Evento'];
+    let eventList = this.eventList[calendar.active.formatted] || [];
     let eventTemplate = "";
     eventList.forEach(item => {
-      eventTemplate += `<li>${item}</li>`;
+      eventTemplate += `<li>${item}<a href="#" class="white-text remove-event"> <i class="material-icons tiny">cancel</i></a></li>`;
     });
+    if(eventTemplate === '') eventTemplate = '<li class="i18n-noEvents">Nessun evento</li>';
 
     this.elements.eventList.innerHTML = eventTemplate;
+    this.elements.eventList.querySelectorAll('.remove-event > i').forEach(element => {
+      element.addEventListener('click', e => {
+        e.preventDefault();
+        let element = e.srcElement;
+        let dateFormatted = this.getFormattedDate(new Date(this.date));
+        let index = this.eventList[dateFormatted].indexOf(element.parentElement.parentElement.firstChild.textContent);
+        this.eventList[dateFormatted].splice(index, 1);
+        localStorage.setItem(localStorageName, JSON.stringify(this.eventList));
+        this.drawAll();
+      });
+    })
   }
 
   drawYearAndCurrentDay() {
     let calendar = this.getCalendar();
     this.elements.year.innerHTML = calendar.active.year;
     this.elements.currentDay.innerHTML = calendar.active.day;
+    this.elements.currentWeekDay.classList.add('i18n-' + AVAILABLE_WEEK_DAYS[calendar.active.week])
     this.elements.currentWeekDay.innerHTML = AVAILABLE_WEEK_DAYS[calendar.active.week];
   }
 
@@ -119,7 +132,7 @@ class CALENDAR {
     let monthTemplate = "";
     let calendar = this.getCalendar();
     availableMonths.forEach((month, idx) => {
-      monthTemplate += `<li class="${idx === calendar.active.month ? 'active' : ''}" data-month="${idx}">${month}</li>`
+      monthTemplate += `<li class="${idx === calendar.active.month ? 'active' : ''} i18n-${month}" data-month="${idx}">${month}</li>`
     });
 
     this.elements.month.innerHTML = monthTemplate;
@@ -128,7 +141,8 @@ class CALENDAR {
   drawWeekDays() {
     let weekTemplate = "";
     AVAILABLE_WEEK_DAYS.forEach(week => {
-      weekTemplate += `<li>${week.slice(0, 3)}</li>`
+      let slice = week.slice(0, 3);
+      weekTemplate += `<li class="i18n-${slice}">${slice}</li>`
     });
 
     this.elements.week.innerHTML = weekTemplate;
