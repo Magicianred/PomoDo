@@ -47,7 +47,7 @@ class CALENDAR {
     let eventList = this.eventList[calendar.active.formatted] || [];
     let eventTemplate = "";
     eventList.forEach(item => {
-      eventTemplate += `<li>${item}<a href="#" class="white-text remove-event"> <i class="material-icons tiny">cancel</i></a></li>`;
+      eventTemplate += `<li>${item}<a href="#" class="white-text remove-event"> <i class="fas fa-times-circle"></i></a></li>`;
     });
     if(eventTemplate === '') eventTemplate = '<li class="i18n-noEvents">Nessun evento</li>';
 
