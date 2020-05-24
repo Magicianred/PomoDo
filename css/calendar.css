@@ -167,7 +167,7 @@
 }
 
 .calendar .calendar-days li {
-  width: calc(460px / 7);
+  width: calc(459px / 7);
   height: 50px;
   line-height: 50px;
 }
@@ -217,7 +217,7 @@
 }
 
 .calendar .calendar-week li {
-  width: calc(460px / 7);
+  width: calc(459px / 7);
   height: 30px;
   line-height: 30px;
 }
