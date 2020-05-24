@@ -1,4 +1,3 @@
-const AVAILABLE_WEEK_DAYS = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
 const localStorageName = 'calendar-events';
 
 class CALENDAR {
@@ -49,7 +48,7 @@ class CALENDAR {
     eventList.forEach(item => {
       eventTemplate += `<li>${item}<a href="#" class="white-text remove-event"> <i class="fas fa-times-circle"></i></a></li>`;
     });
-    if(eventTemplate === '') eventTemplate = '<li class="i18n-noEvents">Nessun evento</li>';
+    if(eventTemplate === '') eventTemplate = '<li>' + document.querySelector('.i18n-noEvents').textContent + '</li>';
 
     this.elements.eventList.innerHTML = eventTemplate;
     this.elements.eventList.querySelectorAll('.remove-event > i').forEach(element => {
@@ -69,8 +68,7 @@ class CALENDAR {
     let calendar = this.getCalendar();
     this.elements.year.innerHTML = calendar.active.year;
     this.elements.currentDay.innerHTML = calendar.active.day;
-    this.elements.currentWeekDay.classList.add('i18n-' + AVAILABLE_WEEK_DAYS[calendar.active.week])
-    this.elements.currentWeekDay.innerHTML = AVAILABLE_WEEK_DAYS[calendar.active.week];
+    this.elements.currentWeekDay.innerHTML = document.querySelector('.i18n-weekDays').textContent.split('-')[calendar.active.week];
   }
 
   drawDays() {
@@ -128,11 +126,11 @@ class CALENDAR {
   }
 
   drawMonths() {
-    let availableMonths = ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"];
+    let availableMonths = document.querySelector('.i18n-months').textContent.split('-');
     let monthTemplate = "";
     let calendar = this.getCalendar();
     availableMonths.forEach((month, idx) => {
-      monthTemplate += `<li class="${idx === calendar.active.month ? 'active' : ''} i18n-${month}" data-month="${idx}">${month}</li>`
+      monthTemplate += `<li class="${idx === calendar.active.month ? 'active' : ''}" data-month="${idx}">${month}</li>`
     });
 
     this.elements.month.innerHTML = monthTemplate;
@@ -140,9 +138,9 @@ class CALENDAR {
 
   drawWeekDays() {
     let weekTemplate = "";
-    AVAILABLE_WEEK_DAYS.forEach(week => {
+    document.querySelector('.i18n-weekDays').textContent.split('-').forEach(week => {
       let slice = week.slice(0, 3);
-      weekTemplate += `<li class="i18n-${slice}">${slice}</li>`
+      weekTemplate += `<li>${slice}</li>`
     });
 
     this.elements.week.innerHTML = weekTemplate;
@@ -197,6 +195,13 @@ class CALENDAR {
     });
 
 
+    document.querySelectorAll('.translate-btn').forEach(element => {
+      element.addEventListener('click', evt => {
+        setTimeout(function(x){
+          x.drawAll();
+        }, 10, this);
+      })
+    })
   }
 
 

@@ -35,35 +35,10 @@ $(function(){
 
       //Calendar
       'noEvents' : 'No events',
-      //Complete Week Days
-      'Domenica' : 'Sunday',
-      'Lunedì' : 'Monday',
-      'Martedì' : 'Tuesday',
-      'Mercoledì' : 'Wednesday',
-      'Giovedì' : 'Thursday',
-      'Venerdì' : 'Friday',
-      'Sabato' : 'Saturday',
-      //Week Days with 3 letters
-      'Dom' : 'Sun',
-      'Lun' : 'Mon',
-      'Mar' : 'Tue',
-      'Mer' : 'Wed',
-      'Gio' : 'Thu',
-      'Ven' : 'Fri',
-      'Sab' : 'Sat',
+      //Week Days
+      'weekDays' : 'Sunday-Monday-Tuesday-Wednesday-Thursday-Friday-Saturday',
       //Months
-      'Gen' : 'Jan',
-      'Feb' : 'Feb',
-      'Mar' : 'Mar',
-      'Apr' : 'Apr',
-      'Mag' : 'May',
-      'Giu' : 'Jun',
-      'Lug' : 'Jul',
-      'Ago' : 'Aug',
-      'Set' : 'Sep',
-      'Ott' : 'Oct',
-      'Nov' : 'Nov',
-      'Dic' : 'Dec',
+      'months' : 'Jan-Feb-Mar-Apr-May-Jun-Jul-Aug-Sep-Oct-Nov-Dec',
     },
   };
 
