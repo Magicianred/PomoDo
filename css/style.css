@@ -89,31 +89,37 @@ h3 {
 .spring {
   background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/spring.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .summer {
   background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/summer.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .winter {
   background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/winter.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .fall {
   background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/fall.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .christmas {
   background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/christmas.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .halloween {
   background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../images/homepage-months/halloween.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Pomodo */
