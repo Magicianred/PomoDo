@@ -122,6 +122,12 @@ h3 {
   background-repeat: no-repeat;
 }
 
+@media only screen and (max-width : 600px) {
+  .winter, .summer, .spring, .fall, .christmas, .halloween {
+    background-repeat: repeat;
+  }
+}
+
 /* Pomodo */
 .progressbar-text {
   font-family: GameCube;
@@ -153,6 +159,12 @@ h3 {
   margin-top: 80px;
   margin-bottom: 80px;
   min-width: 425px;
+}
+
+@media only screen and (max-width : 600px) {
+#pomodo-clock-title {
+width: 80%;
+}
 }
 
 #pomodo-timer {
@@ -194,7 +206,7 @@ textarea.materialize-textarea {
   input[type=text]:not(.browser-default),
   input[type=number]:not(.browser-default),
   textarea.materialize-textarea {
-    width: 94%;
+    width: 75%;
   }
 }
 
