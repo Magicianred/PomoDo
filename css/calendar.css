@@ -4,12 +4,22 @@
   box-sizing: border-box;
 }
 
+body.calendario{
+  height: 1150px;
+}
+
 .text-center {
   text-align: center;
 }
 
 .text-right {
   text-align: right;
+}
+
+@media only screen and (max-width : 600px) {
+  .text-right {
+    text-align: center;
+  }
 }
 
 .text-muted {
@@ -51,6 +61,14 @@
   overflow: hidden;
 }
 
+@media only screen and (max-width : 600px) {
+  .calendar {
+    width: 350px;
+    height: 1000px;
+    margin-bottom: 100px;
+  }
+}
+
 .calendar .calendar-left-side-day-of-week, .calendar .current-day-events ul, .calendar .add-event-day, .calendar .calendar-change-year, .calendar .calendar-days li {
   position: relative;
 }
@@ -74,12 +92,33 @@
   float: left;
 }
 
+@media only screen and (max-width : 600px) {
+  .calendar .left-side {
+    height: 480px;
+    width: 350px;
+  }
+}
+
 .calendar .current-day, .calendar .current-day-events {
   padding-top: 40px;
 }
 
+@media only screen and (max-width : 600px) {
+  .calendar .current-day, .calendar .current-day-events {
+    padding-top: 0;
+    margin-top: -40px;
+  }
+}
+
 .calendar .current-day-events {
   height: 170px;
+}
+
+@media only screen and (max-width : 600px) {
+  .calendar .current-day-events {
+    height: 100%;
+    padding-top: 110px;
+  }
 }
 
 .calendar .current-day-events ul {
@@ -99,6 +138,13 @@
 
 .calendar .add-event-day {
   border-bottom: 1px solid white;
+}
+
+@media only screen and (max-width : 600px) {
+  .calendar .add-event-day {
+    margin-top: -360px;
+
+  }
 }
 
 .calendar .add-event-day .add-event-day-field {
@@ -126,6 +172,15 @@
 .calendar .right-side {
   width: 520px;
   float: right;
+}
+
+@media only screen and (max-width : 600px) {
+  .calendar .right-side {
+    float: left;
+    height: 500px;
+    padding: 10px;
+    width: 350px;
+  }
 }
 
 .calendar .calendar-change-year {
@@ -161,6 +216,12 @@
   font-size: 13px;
 }
 
+@media only screen and (max-width : 600px) {
+  .calendar .calendar-month li {
+    width: calc(330px / 12);
+  }
+}
+
 .calendar .calendar-month li.active {
   color: #171717;
   font-weight: 600;
@@ -170,6 +231,12 @@
   width: calc(459px / 7);
   height: 50px;
   line-height: 50px;
+}
+
+@media only screen and (max-width : 600px) {
+  .calendar .calendar-days li {
+    width: calc(325px / 7);
+  }
 }
 
 .calendar .calendar-days li:after {
@@ -202,6 +269,7 @@
   top: 7px;
   right: 7px;
   background: #212121;
+  z-index: 98;
 }
 
 .calendar .calendar-days li.active-day:after {
@@ -220,4 +288,10 @@
   width: calc(459px / 7);
   height: 30px;
   line-height: 30px;
+}
+
+@media only screen and (max-width : 600px) {
+  .calendar .calendar-week li {
+    width: calc(325px / 7);
+  }
 }
