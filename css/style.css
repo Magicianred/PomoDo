@@ -32,6 +32,7 @@
 body {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 main {
@@ -213,6 +214,10 @@ textarea.materialize-textarea {
   textarea.materialize-textarea {
     width: 75%;
   }
+
+  .js-form-placeholder {
+    width: 100% !important;
+  }
 }
 
 input:not([type]):focus:not([readonly]),
@@ -377,10 +382,7 @@ input[type="text"] {
 }
 
 /* Footer */
-footer {
-  position: relative;
-  display: flex;
-}
+
 
 .page-footer {
   display: flex;
