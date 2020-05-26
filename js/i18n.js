@@ -21,9 +21,10 @@ $(function(){
       'exampleHabit' : 'Example: Drinking 2 liters of water per day',
 
       //Footer
-      'create' : 'Created by\xa0',
-      'design' : '\xa0Designed by\xa0',
-      'font' : '\xa0Font by\xa0',
+      'create' : '\u007C\xa0Created by\xa0',
+      'design' : '\u007C\xa0Designed by\xa0',
+      'font' : '\u007C\xa0Font by\xa0',
+      'icons' : '\u007C\xa0Icons by\xa0',
 
       //Events
       'events' : 'Current events:',
