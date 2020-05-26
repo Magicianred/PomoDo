@@ -4,7 +4,7 @@ function addTodo(text, checked) {
   const todo = {
     text,
     checked: false,
-    id: Date.now(),
+    id: [...Array(10)].map(i=>(~~(Math.random()*36)).toString(36)).join(''),
   };
 
   todoItems.push(todo);
@@ -38,7 +38,7 @@ if (habits !== null){ //Ci evita di avere un possibile errore quando non abbiamo
 
 
 function toggleDone(key) {
-  const index = todoItems.findIndex(item => item.id === Number(key));
+  const index = todoItems.findIndex(item => item.id === key);
   todoItems[index].checked = !todoItems[index].checked;
   localStorage.setItem('testo', JSON.stringify(todoItems)); //Abbiamo apportato una modifica e la sovrascriviamo di nuovo per avere la modifica
   const item = document.querySelector(`[data-key='${key}']`);
@@ -50,7 +50,7 @@ function toggleDone(key) {
 }
 
 function deleteTodo(key) {
-  todoItems = todoItems.filter(item => item.id !== Number(key)); //filter crea un nuovo array contentente tutti gli elementi che passano il test implementato dalla funzione.
+  todoItems = todoItems.filter(item => item.id !== key); //filter crea un nuovo array contentente tutti gli elementi che passano il test implementato dalla funzione.
   localStorage.setItem('testo', JSON.stringify(todoItems)); // Toglie e rimette la stringa con l'elemento eliminato
   const item = document.querySelector(`[data-key='${key}']`);
   item.remove();
