@@ -5,7 +5,13 @@
 }
 
 body.calendario{
-  height: 1150px;
+  height: 100%;
+}
+
+@media only screen and (max-width : 600px) {
+body.calendario{
+  height: 1300px;
+}
 }
 
 .text-center {
