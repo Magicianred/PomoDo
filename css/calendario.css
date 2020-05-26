@@ -9,9 +9,9 @@ body.calendario{
 }
 
 @media only screen and (max-width : 600px) {
-body.calendario{
-  height: 1300px;
-}
+  body.calendario{
+    height: 1300px;
+  }
 }
 
 .text-center {
