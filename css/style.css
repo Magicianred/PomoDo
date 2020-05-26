@@ -175,7 +175,7 @@ h3 {
     width: 79%;
   }
   #pomodo-clock-title {
-  width: 80%;
+    width: 80%;
   }
 }
 
@@ -387,13 +387,9 @@ input[type="text"] {
 
 /* Footer */
 @media only screen and (max-width : 600px) {
-.page-footer {
-  font-size: 10px;
-}
-
-.page-footer-abitudini {
-  font-size: 8px;
-}
+  .page-footer {
+    font-size: 8px;
+  }
 }
 
 .page-footer {
