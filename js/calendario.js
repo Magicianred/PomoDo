@@ -263,7 +263,8 @@ class CALENDAR {
 
 
 (function () {
-  new CALENDAR({
+  calendar = new CALENDAR({
     id: "calendar"
   })
+  setTimeout(function(){calendar.drawAll()}, 3000);
 })();
