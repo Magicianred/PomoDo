@@ -344,6 +344,10 @@ input[type="checkbox"] {
   pointer-events: none;
 }
 
+.delete-todo:focus{
+  background-color: transparent;
+}
+
 form {
   width: 100%;
   display: flex;
@@ -382,7 +386,15 @@ input[type="text"] {
 }
 
 /* Footer */
+@media only screen and (max-width : 600px) {
+.page-footer {
+  font-size: 10px;
+}
 
+.page-footer-abitudini {
+  font-size: 8px;
+}
+}
 
 .page-footer {
   display: flex;
