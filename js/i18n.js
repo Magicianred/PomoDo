@@ -26,7 +26,8 @@ $(function(){
       'create' : 'Website created by ',
       'createby' : 'created by ',
       'design' : 'Designed by\xa0',
-      'font' : 'Font by\xa0',
+      'font1' : 'Gamecuben font by\xa0',
+      'font2' : 'Tomatoes font by ',
       'icons' : 'Icons by\xa0',
 
       //Events
