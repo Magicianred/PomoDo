@@ -29,6 +29,7 @@ $(function(){
       'font1' : 'Gamecuben font by\xa0',
       'font2' : 'Tomatoes font by ',
       'icons' : 'Icons by\xa0',
+      'library' : 'JavaScript library used: ',
 
       //Events
       'events' : 'Current events:',
