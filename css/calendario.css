@@ -301,3 +301,21 @@ body.calendario{
     width: calc(325px / 7);
   }
 }
+
+/*Calendario Input*/
+input.add-event-day-field,
+input.add-event-day-field:focus
+{
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.add-event-day-field::placeholder {
+  text-shadow: none;
+  color: #fff !important;
+}
+
+.calendar .add-event-day .add-event-day-field {
+  margin: 0;
+}

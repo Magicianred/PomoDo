@@ -229,32 +229,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
   box-shadow: 0 1px 0 0 #fafafa;
 }
 
-/*Calendar on Mobile*/
-@media only screen and (max-width : 600px) {
-  .left-side {
-    width: 350px;
-
-  }
-}
-
-/*Calendar Input*/
-input.add-event-day-field,
-input.add-event-day-field:focus
-{
-  border-bottom: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-}
-
-.add-event-day-field::placeholder {
-  text-shadow: none;
-  color: #fff !important;
-}
-
-.calendar .add-event-day .add-event-day-field {
-  margin: 0;
-}
-
 /* Floating Action Buttons */
 .italy {
   background: url("../images/italy.png") !important;
@@ -266,7 +240,7 @@ input.add-event-day-field:focus
   background-repeat: no-repeat;
 }
 
-/*Habit*/
+/*Abitudini*/
 .containerHabit {
   width: 100%;
   max-width: 500px;
@@ -386,12 +360,6 @@ input[type="text"] {
 }
 
 /* Footer */
-@media only screen and (max-width : 600px) {
-  .page-footer {
-    font-size: 8px;
-  }
-}
-
 .page-footer {
   display: flex;
   position: fixed;
