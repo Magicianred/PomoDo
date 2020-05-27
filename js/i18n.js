@@ -15,16 +15,19 @@ $(function(){
       'work' : 'Work',
       'break' : 'Break',
 
-      //Habit
+      //Abitudini
       'addHabit' : 'Habits',
       'habitDescription' : 'What do you want to get done everyday?',
       'exampleHabit' : 'Example: Drinking 2 liters of water per day',
 
-      //Footer
-      'create' : '\u007C\xa0Created by\xa0',
-      'design' : '\u007C\xa0Designed by\xa0',
-      'font' : '\u007C\xa0Font by\xa0',
-      'icons' : '\u007C\xa0Icons by\xa0',
+      //Crediti
+      'credits' : 'Credits',
+      'backg' : 'Backgrounds',
+      'create' : 'Website created by ',
+      'createby' : 'created by ',
+      'design' : 'Designed by\xa0',
+      'font' : 'Font by\xa0',
+      'icons' : 'Icons by\xa0',
 
       //Events
       'events' : 'Current events:',
@@ -34,7 +37,7 @@ $(function(){
       'error' : '404 ERROR',
       'darth' : 'You underestimate the power of the dark side',
 
-      //Calendar
+      //Calendario
       'noEvents' : 'No events',
       //Week Days
       'weekDays' : 'Sunday-Monday-Tuesday-Wednesday-Thursday-Friday-Saturday',
