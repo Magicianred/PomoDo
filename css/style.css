@@ -379,3 +379,12 @@ input[type="text"] {
 .background-notfound {
   background-repeat: repeat;
 }
+
+a.links:hover {
+  color: #9e9e9e !important;
+  text-decoration:underline;
+}
+
+a.links {
+  text-decoration: none;
+}
