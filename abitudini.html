@@ -40,77 +40,75 @@
       <!--Side Navbar-->
       <ul class="sidenav" id="mobile-demo">
         <li><div class="user-view">
-          <div class="background">
-            <img src="images/homepage-months/christmas.jpg">
-          </div>
-          <a href="#user"><img class="circle" style="transform: translateX(175%);" src="images/tomato_color.png">
-            <a href="#name"><span class="white-text name">PomoDo</span></a>
-          </div></li>
-          <li><a href="index.html" class="animsition-link">PomoDo</a></li>
-          <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
-          <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
+          <div class="background grey lighten-3"></div>
+          <img class="circle materialboxed" style="transform: translateX(150%);" src="images/tomato1.png">
+          <br>
+        </div></li>
+        <li><a href="index.html" class="animsition-link">PomoDo</a></li>
+        <li><a class="i18n-habits animsition-link" href="abitudini.html">Abitudini</a></li>
+        <li><a class="i18n-calendar animsition-link" href="calendario.html">Calendario</a></li>
+      </ul>
+      <!--End Side Navbar-->
+    </header>
+
+
+
+    <main>
+
+      <!--Habit-->
+      <div class="containerHabit">
+        <div class="center-align">
+          <img src="images/habit.png">
+        </div>
+        <ul class="todo-list js-todo-list"></ul>
+        <div class="empty-state">
+          <h2 class="empty-state__title i18n-addHabit">Abitudini</h2>
+          <p class="empty-state__description i18n-habitDescription">Cosa vorresti fare ogni giorno?</p>
+        </div>
+        <form class="js-form">
+          <input autofocus type="text" placeholder="Esempio: Bere 2 litri d'acqua al giorno" class="js-todo-input i18n-exampleHabit js-form-placeholder">
+        </form>
+      </div>
+      <!--End Habit-->
+
+      <!--Translation Button-->
+      <div class="fixed-action-btn">
+        <a class="btn-floating btn-large grey darken-4">
+          <i class="large fas fa-language"></i>
+        </a>
+        <ul>
+          <li><a href="#" data-lang="it" class="btn-floating btn-small translate-btn italy"></a></li>
+          <li><a href="#" data-lang="en" class="btn-floating btn-small translate-btn england"></a></li>
         </ul>
-        <!--End Side Navbar-->
-      </header>
+      </div>
+    </main>
+    <!--End Translation Button-->
 
+    <!--Footer-->
+    <footer class="page-footer">
+      <a class="links grey-text text-darken-4" href="https://www.carmensantoro.it">© 2020 Carmen Agnese Santoro&nbsp;</a>
+      <span class="grey-text text-darken-4">&#124;&nbsp;</span>
+      <a class="links i18n-credits grey-text text-darken-4" href="crediti.html">Crediti</a>
+    </footer>
+    <!--End Footer-->
+  </div>
 
+  <!--Scripts-->
+  <script src="js/background.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/sidenav.js"></script>
 
-      <main>
+  <!--Habit-->
+  <script src="js/abitudini.js"></script>
 
-        <!--Habit-->
-        <div class="containerHabit">
-          <div class="center-align">
-            <img src="images/habit.png">
-          </div>
-          <ul class="todo-list js-todo-list"></ul>
-          <div class="empty-state">
-            <h2 class="empty-state__title i18n-addHabit">Abitudini</h2>
-            <p class="empty-state__description i18n-habitDescription">Cosa vorresti fare ogni giorno?</p>
-          </div>
-          <form class="js-form">
-            <input autofocus type="text" placeholder="Esempio: Bere 2 litri d'acqua al giorno" class="js-todo-input i18n-exampleHabit js-form-placeholder">
-          </form>
-        </div>
-        <!--End Habit-->
+  <!--Translation Button-->
+  <script src="js/FloatingActionButton.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/i18n.js"></script>
 
-        <!--Translation Button-->
-        <div class="fixed-action-btn">
-          <a class="btn-floating btn-large grey darken-4">
-            <i class="large fas fa-language"></i>
-          </a>
-          <ul>
-            <li><a href="#" data-lang="it" class="btn-floating btn-small translate-btn italy"></a></li>
-            <li><a href="#" data-lang="en" class="btn-floating btn-small translate-btn england"></a></li>
-          </ul>
-        </div>
-      </main>
-      <!--End Translation Button-->
+  <!--Page Transition-->
+  <script src="js/animsition.min.js"></script>
+  <script src="js/pageTransition.js"></script>
 
-      <!--Footer-->
-      <footer class="page-footer">
-        <a class="links grey-text text-darken-4" href="https://www.carmensantoro.it">© 2020 Carmen Agnese Santoro&nbsp;</a>
-        <span class="grey-text text-darken-4">&#124;&nbsp;</span>
-        <a class="links i18n-credits grey-text text-darken-4" href="crediti.html">Crediti</a>
-      </footer>
-      <!--End Footer-->
-    </div>
-
-    <!--Scripts-->
-    <script src="js/background.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/sidenav.js"></script>
-
-    <!--Habit-->
-    <script src="js/abitudini.js"></script>
-
-    <!--Translation Button-->
-    <script src="js/FloatingActionButton.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/i18n.js"></script>
-
-    <!--Page Transition-->
-    <script src="js/animsition.min.js"></script>
-    <script src="js/pageTransition.js"></script>
-
-  </body>
-  </html>
+</body>
+</html>
